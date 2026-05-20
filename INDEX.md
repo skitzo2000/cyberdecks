@@ -11,6 +11,10 @@ A six-part buyer's guide to the major component categories that make up a modern
 5. **[Networking & Radio](./05-networking-radio.md)** — WiFi monitor-mode adapters (Alfa/Panda), internal M.2 cards (AX210 caveats, MT7922), SDR (RTL-SDR V4 EOL, HackRF, KrakenSDR), GPS/GNSS, LoRa/Meshtastic (T-Deck, Heltec), cellular modems, ham radio + Digirig, BT/RFID/NFC, antennas and pigtails.
 6. **[Chassis & Pre-built Decks](./06-chassis-and-prebuilt.md)** — Community 3D-printable designs (Penkesu, Decktility, Cyberboy, Pip-Boy), Pelican/Apache/Nanuk donor cases, surplus mil enclosures, kit chassis (HackberryPi, Pi Slate), complete pre-builts (uConsole, DevTerm, MNT Pocket Reform, Mecha Comet, Beepy), CNC fab services, filament selection, mounting hardware.
 
+## Workshop Series
+
+A separate workshop track teaches builders how to assemble a working cyberdeck from these components. See [`workshops/`](./workshops/) — basic build, battery upgrade, clamshell+BBQ20 upgrade, and radio expansion capstone, each as a standalone session.
+
 ## How to Use This Set
 
 Build-vs-buy is the first fork:
