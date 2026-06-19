@@ -18,7 +18,7 @@ radios, an input MCU, a touchscreen, and a Flipper-compatible expansion header.
 
 ![top](kicad/render_full.png)
 
-**Underside** — RP2040, radio sockets (+ a module), the A7S sockets (J1/J2) the Radxa Cubie A7S plugs into, radio caps/fuses, and the joystick/encoder/button solder pads:
+**Underside** — RP2040, the two radio sockets (nRF24/CC1101/CC2500 plug in here), the A7S sockets (J1/J2) the Radxa Cubie A7S plugs into, radio caps/fuses, and the joystick/encoder/button solder pads:
 
 ![underside](kicad/render_underside.png)
 
