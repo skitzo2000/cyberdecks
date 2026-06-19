@@ -271,43 +271,10 @@ ext battery (USB-C 5V >=3.5A) -> A7S USB-C1 -> board 5V -> 30pin pins2/4
 
 ## 7. BOM
 
-> **Superseded — do not use this table.** It predates the all-THT simplification (it still lists an
-> LDO, load switch, I²C/UART resistors, SMD passives, and omits the Flipper header). Use the maintained
-> lists instead: **[BOM-SHIELD.md](./BOM-SHIELD.md)** (shield) and **[BOM-DECK.md](./BOM-DECK.md)** (full deck).
-> Kept below only for historical reference.
+See the maintained parts lists (sourcing links, no prices):
 
-| # | Qty | Part | Value / MPN | Footprint | ~$ | Notes |
-|--:|--:|---|---|---|--:|---|
-| 1 | 1 | Female header 2×15 | 2.54 mm | THT (back) | 0.50 | mates A7S 30-pin |
-| 2 | 1 | Female header 1×15 | 2.54 mm | THT (back) | 0.30 | mates A7S 15-pin |
-| 3 | 1 | RP2040-Zero | Waveshare | castellated | 3.50 | input MCU only (no radio) |
-| 4 | 1 | 2.8" TFT | ILI9341 + XPT2046 SPI 14-pin | module (front) | 8.00 | resistive touch |
-| 5 | 1 | Female header 1×14 | 2.54 mm | THT | 0.30 | TFT socket |
-| 6 | 4 | Tactile button | 6 mm (or capped) | THT (front edge) | 0.05 | BTN1–4 on shield |
-| 7 | 2 | Radio socket 2×4 | 2.54 mm female | THT (back, overhang) | 0.20 | 8+1 cores |
-| 8 | 2 | AUX pin 1×1 | 2.54 mm | THT | 0.05 | 8+1 pin 9 |
-| 9 | 1 | LDO 3.3V | AP2112K-3.3 | SOT-23-5 | 0.15 | 1 A AP7361C alt |
-| 10 | 1 | Load switch | TPS22918 / AP22802 | SOT-23-6 | 0.20 | 3V3_SW, PB4 |
-| 11 | 1 | Polyfuse | 1.1 A (MF-R110) | THT/1206 | 0.15 | F1 |
-| 12 | 1 | Breakout header J-BRK | 2×7 2.54 mm | THT (back, overhang) | 0.20 | → casing breadboards |
-| 13 | 1 | Input solder field J-IN | 1×12 pads/header | THT | 0.15 | joystick/2btn/encoder |
-| 14 | 1 | Header J-I2C / J-EXP | 2.54 mm | THT | 0.20 | optional extra |
-| 15 | 2 | Bulk cap | 470 µF / 10 V | THT | 0.20 | 5V + radio 3V3 |
-| 16 | ~8 | MLCC 0.1 µF | X7R | 0603 | 0.02 | decoupling |
-| 17 | 3 | MLCC 1 µF | X7R | 0603 | 0.03 | LDO/switch |
-| 18 | 2 | R 2.2 kΩ | I2C pull-ups | 0603 | 0.01 | — |
-| 19 | 2 | R 100 Ω | UART series | 0603 | 0.01 | — |
-| 20 | ~6 | R 10 kΩ | pull-ups / ID | 0603 | 0.01 | — |
-| 21 | 1 | PCB | 2-layer, custom outline | — | ~3–6 | bigger than A7S (see §9) |
-
-**Ambidextrous footprints (populate one strip):** the 4 buttons, 2 radio sockets, J-IN and J-BRK have
-footprints on **both** the top and bottom strips, but you populate **only the strip that ends up at the
-bottom** for your handedness (§9). So *populated* qty is unchanged (4 buttons, 2 radios, 1 J-IN, 1 J-BRK)
-— the extra footprints add only PCB area, ~$0 in parts.
-
-**Off-shield / system parts** (casing-mounted, not on the PCB): 2× mini-breadboard (~$1.50 ea),
-analog thumbstick (~$1.50), 2× tactile button (~$0.05), EC11 encoder (~$0.60), hookup wire.
-**Shield build ≈ $15–20**; full system ≈ $20–26. Excludes radio modules + power bank.
+- **[BOM-SHIELD.md](./BOM-SHIELD.md)** — parts on the backplane PCB (generated from the netlist, all-THT).
+- **[BOM-DECK.md](./BOM-DECK.md)** — the full deck system (A7S, power, radio modules, off-board inputs, chassis).
 
 ---
 

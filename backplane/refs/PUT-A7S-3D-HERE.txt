@@ -1,1 +1,0 @@
-drop A7S STEP/3D/DXF + this mech drawing here

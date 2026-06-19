@@ -36,7 +36,7 @@ BOM-SHIELD.md            shield parts list (sourcing links, no prices)
 BOM-DECK.md              full-deck system parts list (sourcing links, no prices)
 SCHEMATIC.md             authoritative netlist / connectivity (source of truth)
 a7s_backplane_skidl.py   netlist generator  ->  a7s_backplane.net
-kicad/                   pcbnew board, build_pcb.py, renders, STATUS.md
+kicad/                   pcbnew board, build_pcb.py, renders
 a7s.pretty/              custom footprints (TFT, RP2040-Zero, Flipper — see ATTRIBUTION.md)
 refs/                    measured mechanical datums
 tools/                   kpython wrapper (runs pcbnew against the nix KiCad libs)

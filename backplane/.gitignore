@@ -1,0 +1,15 @@
+# KiCad local state / lock files — never publish
+*.kicad_prl
+*.lck
+~*.lck
+fp-info-cache
+
+# build / autoroute scratch
+*.dsn
+*.ses
+drc*.json
+*-drc.rpt
+__pycache__/
+*.pyc
+*.log
+*.erc
