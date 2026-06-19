@@ -4,9 +4,9 @@ A hand-solderable backplane **shield for the [Radxa Cubie A7S](https://radxa.com
 (Allwinner A733). It fans the A7S's 45 header pins out into a cyberdeck I/O board: dual swappable
 radios, an input MCU, a touchscreen, and a Flipper-compatible expansion header.
 
-> **Status:** schematic/netlist complete and verified; PCB placed and fully routed, but the floorplan
-> is a **working starting point**, not a finalized layout. See [Before you fabricate](#before-you-fabricate)
-> before ordering boards.
+> **Status:** schematic/netlist complete and verified; PCB placed and **fully routed** (0 unconnected) in a
+> right-handed layout (A7S inverted, USB-C on the left). Not yet fab-verified — see
+> [Before you fabricate](#before-you-fabricate) before ordering boards.
 
 ---
 
@@ -80,24 +80,28 @@ Yes its a lot of IO, I wanted to max out what was available in the friendliest w
 
 ## Before you fabricate
 
-**Board sides:** connector headers (J1/J2 A7S, J5/J6 radios, J8 joystick, J10 encoder, J11 buttons) and
+**Layout (right-handed):** the A7S mounts on the **LEFT** with its **USB-C / ports facing left**, so the
+board overhang is on the **right**. Joystick (J8) + extra buttons (J11) on the **right**, encoder (J10)
+**bottom-left**, the 4 face buttons along the **bottom**, Flipper on the **front-left**, screen **centered**
+(its image is rotated 180° in firmware to suit the inverted A7S).
+
+**Board sides:** the connector headers (J1/J2 A7S, J5/J6 radios, J8 joystick, J10 encoder, J11 buttons) and
 the RP2040 are on the **back**; the screen, Flipper socket, and the 4 push-buttons are on the **front**.
 
 This board has **not** been fab-verified. Check these first:
 
-1. **Floorplan is a WIP.** Sides are set, but placement/routing are a routed starting point — do a manual
-   placement/route refinement pass in the KiCad GUI before ordering.
+1. **Floorplan** is settled (right-handed, A7S inverted) and routed — but still give it a review pass in the
+   KiCad GUI before ordering.
 2. **RP2040-Zero footprint row spacing** is assumed **15.24 mm** — confirm against your actual module.
 3. **Header pin-1 orientation** vs the A7S must be verified so the shield mates the right way round
    (datum *centers* are exact; pin-1 end/row is not yet confirmed — see `refs/MECH-DATUMS.md`).
-4. **Radio headers — 2× "8+1", on the back.** Two *separate* 8-pin (2×4) sockets, each with its
-   **AUX (+1) pin directly underneath**. Place them **next to each other** on the **backside** of the
-   board. Cheap radio modules (nRF24 / CC1101 / CC2500) plug in there and **stand up perpendicular to the
-   backplane** (antennas up), oriented **90° to the Flipper headers**. Keep them clear of the A7S board
-   outline and the SPI header.
-5. **Flipper headers — 2 connectors, on the front.** The Flipper GPIO is *two* headers — **1×8 + 1×10
-   with a fixed 17.78 mm gap** between them, populated as a **female socket** — standing up at **90° to the
-   deck** (i.e. 90° from the radio modules). Keep that spacing exact so genuine Flipper accessories mate.
+4. **Radio headers — 2× "8+1", back, top-right.** Two *separate* 8-pin (2×4) sockets, each with its
+   **AUX (+1) pin** beside it. They sit at the top-right and are oriented **90° to each other** — one module
+   extends up off the top edge, the other off the right edge — giving flexible three-way module positioning.
+   Cheap nRF24 / CC1101 / CC2500 modules (flat, ~15.5 × 29 mm) plug straight in. Clear of the A7S + each other.
+5. **Flipper header — front-left, female socket.** The Flipper GPIO is *two* connectors — **1×8 + 1×10 with a
+   fixed 17.78 mm gap** — populated as a **female socket** (mirrors the Flipper Zero's own female top). It's on
+   the **front**, so it's on the opposite face from the back-mounted radios (no collision). Keep the spacing exact.
 6. **DRC:** the display-body courtyard floats over the back-side parts, so `pth_inside_courtyard` items
    are expected/cosmetic — distinguish those from real clearance errors.
 
