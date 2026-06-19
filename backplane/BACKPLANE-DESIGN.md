@@ -271,6 +271,11 @@ ext battery (USB-C 5V >=3.5A) -> A7S USB-C1 -> board 5V -> 30pin pins2/4
 
 ## 7. BOM
 
+> **Superseded — do not use this table.** It predates the all-THT simplification (it still lists an
+> LDO, load switch, I²C/UART resistors, SMD passives, and omits the Flipper header). Use the maintained
+> lists instead: **[BOM-SHIELD.md](./BOM-SHIELD.md)** (shield) and **[BOM-DECK.md](./BOM-DECK.md)** (full deck).
+> Kept below only for historical reference.
+
 | # | Qty | Part | Value / MPN | Footprint | ~$ | Notes |
 |--:|--:|---|---|---|--:|---|
 | 1 | 1 | Female header 2×15 | 2.54 mm | THT (back) | 0.50 | mates A7S 30-pin |

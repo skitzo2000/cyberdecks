@@ -31,7 +31,9 @@ radios, an input MCU, a touchscreen, and a Flipper-compatible expansion header.
 ## Repository layout
 
 ```
-BACKPLANE-DESIGN.md      full design doc + BOM
+BACKPLANE-DESIGN.md      full design doc
+BOM-SHIELD.md            shield parts list (sourcing links, no prices)
+BOM-DECK.md              full-deck system parts list (sourcing links, no prices)
 SCHEMATIC.md             authoritative netlist / connectivity (source of truth)
 a7s_backplane_skidl.py   netlist generator  ->  a7s_backplane.net
 kicad/                   pcbnew board, build_pcb.py, renders, STATUS.md
