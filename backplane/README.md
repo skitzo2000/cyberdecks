@@ -1,42 +1,77 @@
 # A7S Cyberdeck Backplane
 
-A hand-solderable backplane "shield" for the **Radxa Cubie A7S** (Allwinner A733).
-It turns the A7S's 45 header pins into a cyberdeck I/O board.
+A hand-solderable backplane **shield for the [Radxa Cubie A7S](https://radxa.com/products/cubie/a7s/)**
+(Allwinner A733). It fans the A7S's 45 header pins out into a cyberdeck I/O board: dual swappable
+radios, an input MCU, a touchscreen, and a Flipper-compatible expansion header.
 
-## What's on it
+> **Status:** schematic/netlist complete and verified; PCB placed and fully routed, but the floorplan
+> is a **working starting point**, not a finalized layout. See [Before you fabricate](#before-you-fabricate)
+> before ordering boards.
 
-- **2× "8+1" radio sockets** on shared SPI1 — drop-in for **nRF24L01+ / CC1101 / CC2500**
-  (the 8-pin nRF24 order + an AUX pin 9 for ESP-01/breadboard use). Two radios can run at once.
-- **RP2040-Zero input MCU** — handles the human inputs only (4 on-board buttons + 2 off-board,
-  joystick, rotary encoder). It is *not* a radio bridge; all radio lines map straight to A7S pins.
-- **2.8" SPI TFT** (ILI9341) with resistive (XPT2046) touch.
-- **Flipper-Zero-compatible header** (real two-connector 1×8 + 1×10 GPIO) for Flipper-ecosystem add-ons.
-- Taps **5V and 3V3 from the A7S header** (external battery powers the A7S over its USB-C port);
-  polyfused radio rails.
+---
+
+## Features
+
+| Block | Detail |
+|---|---|
+| **2× "8+1" radio sockets** | Shared SPI1. Drop-in for **nRF24L01+ / CC1101 / CC2500** (8-pin nRF24 pin order + an AUX pin 9 for ESP-01 / breadboard use). Both radios can run simultaneously. |
+| **RP2040-Zero input MCU** | Human inputs **only** — 4 on-board buttons + 2 off-board, joystick, rotary encoder. It is *not* a radio bridge; every radio line maps straight to an A7S header pin. |
+| **2.8" SPI TFT** | ILI9341 display with resistive (XPT2046) touch. |
+| **Flipper GPIO header** | Real two-connector layout (1×8 + 1×10, 17.78 mm gap) so genuine Flipper-ecosystem add-ons mate. |
+| **Power** | Taps **5 V and 3V3 from the A7S header** (an external battery powers the A7S over its own USB-C port). Radio rails are polyfused. |
 
 ## Design choices
 
-- **All through-hole / hand-solder** — no SMD, no pick-and-place. It's a backplane you solder to.
-- **2-layer.** Schematic/netlist generated with **SKiDL**; board with the KiCad **pcbnew** Python API;
-  autorouting with **freerouting** (headless). See `tools/` and `*_skidl.py`.
-- A7S header geometry is on **STEP-measured datums** so the shield mates correctly (`refs/MECH-DATUMS.md`).
+- **All through-hole / hand-solder.** No SMD, no pick-and-place — it's a backplane you solder to.
+- **2-layer**, designed to be routed on two sides.
+- Schematic/netlist generated with **[SKiDL](https://github.com/devbisme/skidl)**; board built with the
+  KiCad **pcbnew** Python API; autorouted headless with **[freerouting](https://github.com/freerouting/freerouting)**.
+- A7S header geometry sits on **STEP-measured datums** (`refs/MECH-DATUMS.md`) so the shield mates correctly.
 
-## Status
+## Repository layout
 
-Schematic/netlist **complete and verified** (`SCHEMATIC.md`, 0 ERC errors).
-The PCB is **placed and fully routed** (`kicad/a7s_backplane.kicad_pcb`) but the floorplan is a
-**working starting point** — placement/routing still want a human optimization pass in the KiCad GUI
-before fab. Verify the RP2040-Zero footprint row spacing and header pin-1 orientation before ordering.
+```
+BACKPLANE-DESIGN.md      full design doc + BOM
+SCHEMATIC.md             authoritative netlist / connectivity (source of truth)
+a7s_backplane_skidl.py   netlist generator  ->  a7s_backplane.net
+kicad/                   pcbnew board, build_pcb.py, renders, STATUS.md
+a7s.pretty/              custom footprints (TFT, RP2040-Zero, Flipper — see ATTRIBUTION.md)
+refs/                    measured mechanical datums
+tools/                   kpython wrapper (runs pcbnew against the nix KiCad libs)
+```
 
-## Files
+## Build / regenerate
 
-- `BACKPLANE-DESIGN.md` — full design doc + BOM
-- `SCHEMATIC.md` — authoritative netlist / connectivity
-- `a7s_backplane_skidl.py` → `a7s_backplane.net` — netlist generator
-- `kicad/` — pcbnew board, build script, render
-- `a7s.pretty/` — custom footprints (TFT, RP2040-Zero, Flipper — see `ATTRIBUTION.md`)
+```sh
+# 1. netlist (after editing the schematic)
+skidl-python a7s_backplane_skidl.py            # -> a7s_backplane.net
+
+# 2. board from the netlist
+tools/kpython kicad/build_pcb.py               # -> kicad/a7s_backplane.kicad_pcb
+
+# 3. route (headless): export DSN -> freerouting -> import SES
+tools/kpython -c "import pcbnew;b=pcbnew.LoadBoard('kicad/a7s_backplane.kicad_pcb');pcbnew.ExportSpecctraDSN(b,'kicad/a7s_backplane.dsn')"
+freerouting -de kicad/a7s_backplane.dsn -do kicad/a7s_backplane.ses -mp 100 -mt 4
+tools/kpython -c "import pcbnew;b=pcbnew.LoadBoard('kicad/a7s_backplane.kicad_pcb');pcbnew.ImportSpecctraSES(b,'kicad/a7s_backplane.ses');pcbnew.SaveBoard('kicad/a7s_backplane.kicad_pcb',b)"
+```
+
+## Before you fabricate
+
+This board has **not** been fab-verified. Check these first:
+
+1. **Floorplan is a WIP.** Placement and routing are a routed starting point — do a manual
+   placement/route refinement pass in the KiCad GUI before ordering.
+2. **RP2040-Zero footprint row spacing** is assumed **15.24 mm** — confirm against your actual module.
+3. **Header pin-1 orientation** vs the A7S must be verified so the shield mates the right way round
+   (datum *centers* are exact; pin-1 end/row is not yet confirmed — see `refs/MECH-DATUMS.md`).
+4. **Radio module orientation:** the sockets are vertical, so nRF24/CC1101/CC2500 modules **stand up
+   with antennas pointing up**. Keep the two sockets **stacked close together** (the standing modules are
+   thin in-plane); don't spread them wide, and keep them clear of the A7S board outline and the SPI header.
+5. **DRC:** the display-body courtyard floats over the back-side parts, so `pth_inside_courtyard` items
+   are expected/cosmetic — distinguish those from real clearance errors.
 
 ## Credits
 
-Flipper GPIO footprints from [kbembedded/flipper-gpio-eda](https://github.com/kbembedded/flipper-gpio-eda)
-(BSD-2-Clause) — see `a7s.pretty/ATTRIBUTION.md`.
+Flipper GPIO footprints from **[kbembedded/flipper-gpio-eda](https://github.com/kbembedded/flipper-gpio-eda)**
+(BSD-2-Clause) — see [`a7s.pretty/ATTRIBUTION.md`](./a7s.pretty/ATTRIBUTION.md). All other footprints are
+original to this project.
