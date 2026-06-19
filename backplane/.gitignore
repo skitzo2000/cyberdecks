@@ -13,3 +13,7 @@ __pycache__/
 *.pyc
 *.log
 *.erc
+
+# 3D render working files (large vendor STEPs + render-only board)
+kicad/3d/
+*_render.kicad_pcb

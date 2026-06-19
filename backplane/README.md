@@ -10,6 +10,20 @@ radios, an input MCU, a touchscreen, and a Flipper-compatible expansion header.
 
 ---
 
+## Preview
+
+> Rough 3D render — real STEP models for the 2.8" screen and the RP2040-Zero; radios shown standing off the back per the design intent. The floorplan is still a WIP.
+
+| Front — screen + buttons | Back — RP2040, radios, power |
+|---|---|
+| ![front](kicad/render_front3d.png) | ![back](kicad/render_back3d.png) |
+
+Top-down board view:
+
+![top-down](kicad/render_top.png)
+
+---
+
 ## Features
 
 | Block | Detail |
