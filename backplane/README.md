@@ -73,10 +73,16 @@ This board has **not** been fab-verified. Check these first:
 2. **RP2040-Zero footprint row spacing** is assumed **15.24 mm** — confirm against your actual module.
 3. **Header pin-1 orientation** vs the A7S must be verified so the shield mates the right way round
    (datum *centers* are exact; pin-1 end/row is not yet confirmed — see `refs/MECH-DATUMS.md`).
-4. **Radio module orientation:** the sockets are vertical, so nRF24/CC1101/CC2500 modules **stand up
-   with antennas pointing up**. Keep the two sockets **stacked close together** (the standing modules are
-   thin in-plane); don't spread them wide, and keep them clear of the A7S board outline and the SPI header.
-5. **DRC:** the display-body courtyard floats over the back-side parts, so `pth_inside_courtyard` items
+4. **Radio headers — 2× "8+1", on the back.** Two *separate* 8-pin (2×4) sockets, each with its
+   **AUX (+1) pin directly underneath**. Place them **next to each other** on the **backside** of the
+   board. Cheap radio modules (nRF24 / CC1101 / CC2500) plug in there and **stand up perpendicular to the
+   backplane** (antennas up), oriented **90° to the Flipper headers**. Keep them clear of the A7S board
+   outline and the SPI header.
+5. **Flipper headers — 2 connectors, on the front.** The Flipper GPIO is *two* headers — **1×8 + 1×10
+   with a fixed 17.78 mm gap** between them — standing up at **90° to the deck** (i.e. 90° from the radio
+   modules above). Keep that spacing exact so genuine Flipper accessories mate, and match pin gender to
+   your accessory.
+6. **DRC:** the display-body courtyard floats over the back-side parts, so `pth_inside_courtyard` items
    are expected/cosmetic — distinguish those from real clearance errors.
 
 ## Credits
