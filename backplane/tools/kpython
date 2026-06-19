@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Run python3.13 with KiCad 10's pcbnew module + libs available.
+set -e
+SP=$(find /nix/store -maxdepth 6 -name pcbnew.py -path '*kicad*python3.13/site-packages*' 2>/dev/null | head -1)
+[ -z "$SP" ] && { echo "pcbnew.py not found in nix store" >&2; exit 1; }
+SPDIR=$(dirname "$SP"); LIBDIR=$(dirname "$(dirname "$SPDIR")")
+FP=$(find /nix/store -maxdepth 5 -type d -path '*share/kicad/footprints' 2>/dev/null | head -1)
+SYM=$(find /nix/store -maxdepth 5 -type d -path '*share/kicad/symbols' 2>/dev/null | head -1)
+M3D=$(find /nix/store -maxdepth 5 -type d -path '*share/kicad/3dmodels' 2>/dev/null | head -1)
+export PYTHONPATH="$SPDIR${PYTHONPATH:+:$PYTHONPATH}"
+export LD_LIBRARY_PATH="$LIBDIR${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export KICAD_FP="$FP" KICAD_SYM="$SYM" KICAD_3D="$M3D"
+exec python3.13 "$@"

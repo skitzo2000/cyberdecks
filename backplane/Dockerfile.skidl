@@ -1,0 +1,28 @@
+# Headless SKiDL -> KiCad netlist. No KiCad GUI required.
+# SKiDL only needs Python + the KiCad SYMBOL libraries (.kicad_sym) to resolve pin data;
+# footprints are assigned as plain strings, so no footprint libs / pcbnew needed here.
+#
+# Build:  docker build -f Dockerfile.skidl -t a7s-skidl .
+# Run:    docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/work" a7s-skidl
+#         -> writes a7s_backplane.net into the current dir (owned by you, thanks to --user)
+FROM python:3.12-slim
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends git \
+ && rm -rf /var/lib/apt/lists/*
+
+# KiCad official symbol libraries (S-expression .kicad_sym). Pin to v8 to match the lib IDs used.
+RUN git clone --depth 1 --branch 8.0.6 \
+      https://gitlab.com/kicad/libraries/kicad-symbols.git /opt/kicad-symbols \
+ || git clone --depth 1 https://gitlab.com/kicad/libraries/kicad-symbols.git /opt/kicad-symbols
+
+RUN pip install --no-cache-dir skidl
+
+# SKiDL looks these up; set all the versioned aliases to be safe.
+ENV KICAD_SYMBOL_DIR=/opt/kicad-symbols \
+    KICAD6_SYMBOL_DIR=/opt/kicad-symbols \
+    KICAD7_SYMBOL_DIR=/opt/kicad-symbols \
+    KICAD8_SYMBOL_DIR=/opt/kicad-symbols
+
+WORKDIR /work
+CMD ["python", "a7s_backplane_skidl.py"]

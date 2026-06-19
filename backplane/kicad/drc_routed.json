@@ -1,0 +1,3096 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-06-19T10:23:51",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.3",
+    "schematic_parity": [],
+    "source": "a7s_backplane_routed.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint TP2",
+                    "pos": {
+                        "x": 78.0,
+                        "y": 73.6366
+                    },
+                    "uuid": "025c1beb-53a9-4f7a-bedb-140b2a230cbc"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 90.16
+                    },
+                    "uuid": "0b52b644-b283-41c9-a35c-9998975e49e4"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 5 [JOY_SW] of J8",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 80.0
+                    },
+                    "uuid": "d5fa9252-f1d5-4659-960e-cc1f3dc1662c"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [+3V3] of C2",
+                    "pos": {
+                        "x": 35.5,
+                        "y": 56.0
+                    },
+                    "uuid": "73142d11-aeeb-4560-9adf-e01206519f8d"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of C2",
+                    "pos": {
+                        "x": 40.5,
+                        "y": 56.0
+                    },
+                    "uuid": "c405f5e0-ccac-40d6-ac0a-51fdafad08b8"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J10",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 64.81
+                    },
+                    "uuid": "2b09f6e7-7173-4c95-97fc-b4eb73eda3be"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [ENC_A] of J10",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 64.81
+                    },
+                    "uuid": "47369dcc-bc26-43a6-890c-51b68fc54d31"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [ENC_B] of J10",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 62.27
+                    },
+                    "uuid": "a24a2d75-f34d-4dd0-8359-eda0c889d57b"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 3 [ENC_SW] of J10",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 59.73
+                    },
+                    "uuid": "11a337f1-37bf-4bf1-934a-23edb44b6f98"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 4 [GND] of J10",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 57.19
+                    },
+                    "uuid": "a35d4a09-548e-4f2b-b1e8-0ea3ac43bba2"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint H2",
+                    "pos": {
+                        "x": 83.99,
+                        "y": 33.18
+                    },
+                    "uuid": "35ff5761-5375-4548-8cdc-8213d58ae422"
+                },
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 44.33,
+                        "y": 31.75
+                    },
+                    "uuid": "e38db61b-f9ef-49a1-8fe6-bdd15c5ee253"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint H2",
+                    "pos": {
+                        "x": 83.99,
+                        "y": 33.18
+                    },
+                    "uuid": "35ff5761-5375-4548-8cdc-8213d58ae422"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "NPTH inside courtyard",
+            "items": [
+                {
+                    "description": "NPTH pad of H2",
+                    "pos": {
+                        "x": 83.99,
+                        "y": 33.18
+                    },
+                    "uuid": "310858f0-fad1-41ee-b97f-94fb11ba7051"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "npth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint H3",
+                    "pos": {
+                        "x": 40.19,
+                        "y": 76.98
+                    },
+                    "uuid": "3a045620-39e7-471b-962d-fe8772808f78"
+                },
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 44.3,
+                        "y": 78.71
+                    },
+                    "uuid": "6b8a9768-2d02-4cb5-a8fa-8996d8d4d69f"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint H3",
+                    "pos": {
+                        "x": 40.19,
+                        "y": 76.98
+                    },
+                    "uuid": "3a045620-39e7-471b-962d-fe8772808f78"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "NPTH inside courtyard",
+            "items": [
+                {
+                    "description": "NPTH pad of H3",
+                    "pos": {
+                        "x": 40.19,
+                        "y": 76.98
+                    },
+                    "uuid": "87956fe3-f6e7-41c7-9aac-24acea38dc6e"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "npth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [+3V3] of C1",
+                    "pos": {
+                        "x": 35.5,
+                        "y": 64.0
+                    },
+                    "uuid": "f0f31853-e3c2-49e1-85eb-6dc6ddfebbbe"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of C1",
+                    "pos": {
+                        "x": 40.5,
+                        "y": 64.0
+                    },
+                    "uuid": "4472685d-be5a-4326-9a9a-423204d8256c"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J6b",
+                    "pos": {
+                        "x": 14.0,
+                        "y": 43.5
+                    },
+                    "uuid": "421bb7c8-ecfa-40e6-8783-1845175a6aef"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [RADIO2_AUX] of J6b",
+                    "pos": {
+                        "x": 14.0,
+                        "y": 43.5
+                    },
+                    "uuid": "8a630f05-db94-4a9b-9980-2fc12e3e195b"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 3V3 [RP_3V3] of A1",
+                    "pos": {
+                        "x": 53.88,
+                        "y": 63.58
+                    },
+                    "uuid": "9e1b093b-be89-4f2a-8920-cadc90da4870"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 5V [+5V] of A1",
+                    "pos": {
+                        "x": 53.88,
+                        "y": 68.66
+                    },
+                    "uuid": "f2bc0a7d-6ca1-42c8-b24d-27cbc7813f39"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GND [GND] of A1",
+                    "pos": {
+                        "x": 53.88,
+                        "y": 66.12
+                    },
+                    "uuid": "41fa42fd-8bdd-4fe3-88cb-e261a94699b0"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP0 [A7S_U2RX] of A1",
+                    "pos": {
+                        "x": 69.12,
+                        "y": 68.66
+                    },
+                    "uuid": "f01586a9-ddf9-4b47-9e43-15c28b9cc3e6"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP1 [A7S_U2TX] of A1",
+                    "pos": {
+                        "x": 69.12,
+                        "y": 66.12
+                    },
+                    "uuid": "d0527fcd-a7a6-4702-b142-de148bd27ca3"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP2 [BTN1] of A1",
+                    "pos": {
+                        "x": 69.12,
+                        "y": 63.58
+                    },
+                    "uuid": "88b40f7c-d0dc-4cf9-a911-15e5e40aba69"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP3 [BTN2] of A1",
+                    "pos": {
+                        "x": 69.12,
+                        "y": 61.04
+                    },
+                    "uuid": "d1c1f4ad-fa0b-45c5-98e0-9fbec4e49686"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP4 [BTN3] of A1",
+                    "pos": {
+                        "x": 69.12,
+                        "y": 58.5
+                    },
+                    "uuid": "755992fe-7686-4a9a-b6c7-58803dff6a01"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP5 [BTN4] of A1",
+                    "pos": {
+                        "x": 69.12,
+                        "y": 55.96
+                    },
+                    "uuid": "b50ddd52-e48b-4197-97cc-9b7bc870fac5"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP6 [BTN5] of A1",
+                    "pos": {
+                        "x": 69.12,
+                        "y": 53.42
+                    },
+                    "uuid": "7f22961f-aa55-46aa-92f4-60ee079bca88"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP7 [BTN6] of A1",
+                    "pos": {
+                        "x": 69.12,
+                        "y": 50.88
+                    },
+                    "uuid": "760ee99d-6559-4f31-9600-fccc873ca776"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP8 [JOY_SW] of A1",
+                    "pos": {
+                        "x": 69.12,
+                        "y": 48.34
+                    },
+                    "uuid": "899110a8-361f-422c-9cdd-8930cc921a95"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP9 [ENC_A] of A1",
+                    "pos": {
+                        "x": 56.42,
+                        "y": 48.15
+                    },
+                    "uuid": "356bad9f-be25-4f90-b617-dd6a21de0c8c"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP10 [ENC_B] of A1",
+                    "pos": {
+                        "x": 58.96,
+                        "y": 48.15
+                    },
+                    "uuid": "5a820df7-15f9-4bef-bc25-45f27ad5b73d"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP11 [ENC_SW] of A1",
+                    "pos": {
+                        "x": 61.5,
+                        "y": 48.15
+                    },
+                    "uuid": "dd47d235-aff3-4abc-9e95-f90b9432dae9"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP12 [<no net>] of A1",
+                    "pos": {
+                        "x": 64.04,
+                        "y": 48.15
+                    },
+                    "uuid": "54b86d2f-bd4e-46b6-8e94-89bfd3dd57b7"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP13 [<no net>] of A1",
+                    "pos": {
+                        "x": 66.58,
+                        "y": 48.15
+                    },
+                    "uuid": "12ebf94d-d18f-4a37-b40b-ddc9bb0a6c42"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP14 [<no net>] of A1",
+                    "pos": {
+                        "x": 53.88,
+                        "y": 48.34
+                    },
+                    "uuid": "9e63cd5f-4160-44c5-9a01-eb1edcf6c3c5"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP15 [<no net>] of A1",
+                    "pos": {
+                        "x": 53.88,
+                        "y": 50.88
+                    },
+                    "uuid": "b0a8f1e3-3048-469a-9354-5c18d754853d"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP26 [JOY_X] of A1",
+                    "pos": {
+                        "x": 53.88,
+                        "y": 53.42
+                    },
+                    "uuid": "bc2ff6ab-5e88-4b0f-9b2c-b8fe52c40ffd"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP27 [JOY_Y] of A1",
+                    "pos": {
+                        "x": 53.88,
+                        "y": 55.96
+                    },
+                    "uuid": "7dda8792-bfe5-430f-8b6e-7ecb483d0d19"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP28 [<no net>] of A1",
+                    "pos": {
+                        "x": 53.88,
+                        "y": 58.5
+                    },
+                    "uuid": "aa5cb63b-1c02-4725-a36a-9da2b449870a"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad GP29 [<no net>] of A1",
+                    "pos": {
+                        "x": 53.88,
+                        "y": 61.04
+                    },
+                    "uuid": "7b702379-fc4b-4d51-840c-775bcdd4d815"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [+5V_IN] of F1",
+                    "pos": {
+                        "x": 22.0,
+                        "y": 37.0
+                    },
+                    "uuid": "9057164f-834d-461b-8b15-1b8de3026244"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [+5V] of F1",
+                    "pos": {
+                        "x": 27.1,
+                        "y": 35.8
+                    },
+                    "uuid": "dbff748e-640a-44d6-85bd-6a01108a1fd2"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J5b",
+                    "pos": {
+                        "x": 21.5,
+                        "y": 64.5
+                    },
+                    "uuid": "5277faf3-68f8-4e6f-af7f-6eb61336281e"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [RADIO1_AUX] of J5b",
+                    "pos": {
+                        "x": 21.5,
+                        "y": 64.5
+                    },
+                    "uuid": "3a3bf573-c8ae-40bf-876d-ee68fb10d5f3"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J6",
+                    "pos": {
+                        "x": 13.96,
+                        "y": 48.0
+                    },
+                    "uuid": "692616d0-348c-48f6-a1de-d54a0a73977d"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [GND] of J6",
+                    "pos": {
+                        "x": 13.96,
+                        "y": 48.0
+                    },
+                    "uuid": "423f45ae-e5e1-4ac3-bfc2-ec00dab22390"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [+3V3] of J6",
+                    "pos": {
+                        "x": 13.96,
+                        "y": 50.54
+                    },
+                    "uuid": "e5e7db32-c6ba-4975-b15d-77ae2e05138c"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 3 [RADIO2_FLEXA] of J6",
+                    "pos": {
+                        "x": 16.5,
+                        "y": 48.0
+                    },
+                    "uuid": "00ff14bc-2abe-47bc-b594-3aa2cbee475c"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 4 [RADIO2_CS] of J6",
+                    "pos": {
+                        "x": 16.5,
+                        "y": 50.54
+                    },
+                    "uuid": "65b21b72-1797-4d66-9bfc-0e355cb4ffd7"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 5 [SPI_SCK] of J6",
+                    "pos": {
+                        "x": 19.04,
+                        "y": 48.0
+                    },
+                    "uuid": "ab6ddb68-7f04-441c-a9c9-b638e8fee9f3"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 6 [SPI_MOSI] of J6",
+                    "pos": {
+                        "x": 19.04,
+                        "y": 50.54
+                    },
+                    "uuid": "edd45de3-572a-4385-8242-dc4f94ddeeca"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 7 [SPI_MISO] of J6",
+                    "pos": {
+                        "x": 21.58,
+                        "y": 48.0
+                    },
+                    "uuid": "a03a19f0-1ed8-482a-8677-54c9e7b6ee21"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 8 [RADIO2_FLEXB] of J6",
+                    "pos": {
+                        "x": 21.58,
+                        "y": 50.54
+                    },
+                    "uuid": "81ba42ad-7539-420e-9bfb-3e0eb8012b8f"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 44.3,
+                        "y": 78.71
+                    },
+                    "uuid": "6b8a9768-2d02-4cb5-a8fa-8996d8d4d69f"
+                },
+                {
+                    "description": "Footprint H4",
+                    "pos": {
+                        "x": 83.99,
+                        "y": 76.98
+                    },
+                    "uuid": "b6e9f1d3-b041-474d-ab35-5569de769a3e"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 44.3,
+                        "y": 78.71
+                    },
+                    "uuid": "6b8a9768-2d02-4cb5-a8fa-8996d8d4d69f"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [RADIO1_FLEXA] of J2",
+                    "pos": {
+                        "x": 44.3,
+                        "y": 78.71
+                    },
+                    "uuid": "3af9041c-ec72-4b74-8808-23a20ffac487"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [TOUCH_CS] of J2",
+                    "pos": {
+                        "x": 46.84,
+                        "y": 78.71
+                    },
+                    "uuid": "556cfbcb-2bb5-4fd4-8379-c503cb14994d"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 3 [TOUCH_IRQ] of J2",
+                    "pos": {
+                        "x": 49.38,
+                        "y": 78.71
+                    },
+                    "uuid": "c949351d-e4fb-4064-89bf-254d63776081"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 4 [GND] of J2",
+                    "pos": {
+                        "x": 51.92,
+                        "y": 78.71
+                    },
+                    "uuid": "8da44f97-38ef-49ce-adb4-dc2a0131fd87"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 5 [TFT_BL] of J2",
+                    "pos": {
+                        "x": 54.46,
+                        "y": 78.71
+                    },
+                    "uuid": "275643a1-9958-440e-94fa-0064dca464dd"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 6 [SPARE3] of J2",
+                    "pos": {
+                        "x": 57.0,
+                        "y": 78.71
+                    },
+                    "uuid": "552397e2-cd93-4821-ad70-8fe9873d45af"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 7 [RADIO2_FLEXA] of J2",
+                    "pos": {
+                        "x": 59.54,
+                        "y": 78.71
+                    },
+                    "uuid": "dad687fe-160b-4cbc-b4e4-e03b2657e381"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 8 [RADIO2_CS] of J2",
+                    "pos": {
+                        "x": 62.08,
+                        "y": 78.71
+                    },
+                    "uuid": "70804ea2-35bc-4b51-a0e5-4978c079a8d6"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 9 [GND] of J2",
+                    "pos": {
+                        "x": 64.62,
+                        "y": 78.71
+                    },
+                    "uuid": "5ce814df-037c-4c5f-9f1d-ff90d114c15e"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 10 [RADIO2_FLEXB] of J2",
+                    "pos": {
+                        "x": 67.16,
+                        "y": 78.71
+                    },
+                    "uuid": "9b43e48a-5813-42c2-b4a1-4c419f4f5ddd"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 11 [RADIO1_AUX] of J2",
+                    "pos": {
+                        "x": 69.7,
+                        "y": 78.71
+                    },
+                    "uuid": "daf0b626-7461-4b23-b5de-1aa31c979759"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 12 [RADIO2_AUX] of J2",
+                    "pos": {
+                        "x": 72.24,
+                        "y": 78.71
+                    },
+                    "uuid": "42f0a9b1-3670-4203-976e-eec8cbba9fbf"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 13 [SPARE0] of J2",
+                    "pos": {
+                        "x": 74.78,
+                        "y": 78.71
+                    },
+                    "uuid": "01fc70f2-951b-406d-8f20-69ac9e0952a0"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 14 [SPARE1] of J2",
+                    "pos": {
+                        "x": 77.32,
+                        "y": 78.71
+                    },
+                    "uuid": "a142f9f0-fd82-433a-8668-d2e0b1601d9c"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 15 [SPARE2] of J2",
+                    "pos": {
+                        "x": 79.86,
+                        "y": 78.71
+                    },
+                    "uuid": "77d3b255-334f-49e7-81b1-7feb2e9f5ec0"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [+3V3_IN] of F2",
+                    "pos": {
+                        "x": 35.5,
+                        "y": 49.5
+                    },
+                    "uuid": "5e246072-8ae3-4372-aab6-21adec823e0a"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [+3V3] of F2",
+                    "pos": {
+                        "x": 40.6,
+                        "y": 48.3
+                    },
+                    "uuid": "5c77e5db-2423-4537-a364-e11a716d5f1d"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J5",
+                    "pos": {
+                        "x": 21.54,
+                        "y": 59.54
+                    },
+                    "uuid": "a09453c8-31b0-4526-85f2-a2b12715fc31"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [GND] of J5",
+                    "pos": {
+                        "x": 21.54,
+                        "y": 59.54
+                    },
+                    "uuid": "98a94719-b3cd-446a-9650-069ae9e3df51"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [+3V3] of J5",
+                    "pos": {
+                        "x": 21.54,
+                        "y": 57.0
+                    },
+                    "uuid": "16fbd662-b006-4530-a632-3908c7870f90"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 3 [RADIO1_FLEXA] of J5",
+                    "pos": {
+                        "x": 19.0,
+                        "y": 59.54
+                    },
+                    "uuid": "260ec042-4571-44e5-8424-a15e3dd06558"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 4 [RADIO1_CS] of J5",
+                    "pos": {
+                        "x": 19.0,
+                        "y": 57.0
+                    },
+                    "uuid": "06980ad7-535e-4ea1-9369-7cf92bb95431"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 5 [SPI_SCK] of J5",
+                    "pos": {
+                        "x": 16.46,
+                        "y": 59.54
+                    },
+                    "uuid": "50627bbe-f2eb-49de-85c4-93c58e9492d7"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 6 [SPI_MOSI] of J5",
+                    "pos": {
+                        "x": 16.46,
+                        "y": 57.0
+                    },
+                    "uuid": "8da374de-dffd-468d-a848-73bf01707ca9"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 7 [SPI_MISO] of J5",
+                    "pos": {
+                        "x": 13.92,
+                        "y": 59.54
+                    },
+                    "uuid": "50acdccd-ff56-4b8f-ac31-d52a61e0fef9"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 8 [RADIO1_FLEXB] of J5",
+                    "pos": {
+                        "x": 13.92,
+                        "y": 57.0
+                    },
+                    "uuid": "4888342b-3dc4-47e1-afed-50c7bff86887"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint TP1",
+                    "pos": {
+                        "x": 74.0,
+                        "y": 73.6366
+                    },
+                    "uuid": "a40c6611-f645-4cda-83f7-1a86ff51cd8c"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint H4",
+                    "pos": {
+                        "x": 83.99,
+                        "y": 76.98
+                    },
+                    "uuid": "b6e9f1d3-b041-474d-ab35-5569de769a3e"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "NPTH inside courtyard",
+            "items": [
+                {
+                    "description": "NPTH pad of H4",
+                    "pos": {
+                        "x": 83.99,
+                        "y": 76.98
+                    },
+                    "uuid": "cdc3d9a8-1752-4058-b118-3bb2e75dd085"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "npth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint H1",
+                    "pos": {
+                        "x": 40.19,
+                        "y": 33.18
+                    },
+                    "uuid": "c3e105e0-d296-4fb2-98b6-993922f4d444"
+                },
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 44.33,
+                        "y": 31.75
+                    },
+                    "uuid": "e38db61b-f9ef-49a1-8fe6-bdd15c5ee253"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint H1",
+                    "pos": {
+                        "x": 40.19,
+                        "y": 33.18
+                    },
+                    "uuid": "c3e105e0-d296-4fb2-98b6-993922f4d444"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "NPTH inside courtyard",
+            "items": [
+                {
+                    "description": "NPTH pad of H1",
+                    "pos": {
+                        "x": 40.19,
+                        "y": 33.18
+                    },
+                    "uuid": "cc3d2209-e48f-4d1a-b8a4-9e79829f1ddd"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "npth_inside_courtyard"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 44.33,
+                        "y": 31.75
+                    },
+                    "uuid": "e38db61b-f9ef-49a1-8fe6-bdd15c5ee253"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 1 [+3V3_IN] of J1",
+                    "pos": {
+                        "x": 44.33,
+                        "y": 31.75
+                    },
+                    "uuid": "54fa48b6-3362-42d1-8ad7-1314e2f6b6a8"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 2 [+5V_IN] of J1",
+                    "pos": {
+                        "x": 44.33,
+                        "y": 34.29
+                    },
+                    "uuid": "7baa20d9-96d2-4773-8a39-043de82d56f5"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 3 [UART3_RX] of J1",
+                    "pos": {
+                        "x": 46.87,
+                        "y": 31.75
+                    },
+                    "uuid": "c7de047a-2e1f-462b-abb4-dc250ebdf051"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 4 [+5V_IN] of J1",
+                    "pos": {
+                        "x": 46.87,
+                        "y": 34.29
+                    },
+                    "uuid": "8b3e3437-b1f2-4300-886a-31c13e0bec15"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 5 [UART3_TX] of J1",
+                    "pos": {
+                        "x": 49.41,
+                        "y": 31.75
+                    },
+                    "uuid": "d687acfe-7b51-47e5-a633-fb78c1815737"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 6 [GND] of J1",
+                    "pos": {
+                        "x": 49.41,
+                        "y": 34.29
+                    },
+                    "uuid": "b9475949-9332-44c0-b786-a33899eca20b"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 7 [A7S_U2TX] of J1",
+                    "pos": {
+                        "x": 51.95,
+                        "y": 31.75
+                    },
+                    "uuid": "637714c2-32ef-487d-b191-04da8951ca8e"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 8 [CONSOLE_TX] of J1",
+                    "pos": {
+                        "x": 51.95,
+                        "y": 34.29
+                    },
+                    "uuid": "411c1c42-965a-45fa-8cc6-2c666fc26275"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 9 [GND] of J1",
+                    "pos": {
+                        "x": 54.49,
+                        "y": 31.75
+                    },
+                    "uuid": "fcd15208-b410-4480-a3e9-b1d14f08615f"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 10 [CONSOLE_RX] of J1",
+                    "pos": {
+                        "x": 54.49,
+                        "y": 34.29
+                    },
+                    "uuid": "6c7ecf92-4954-44b1-ba3b-b418b8ec6411"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 11 [A7S_U2RX] of J1",
+                    "pos": {
+                        "x": 57.03,
+                        "y": 31.75
+                    },
+                    "uuid": "0346732d-e5e2-492e-bc54-1819e80a055e"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 12 [<no net>] of J1",
+                    "pos": {
+                        "x": 57.03,
+                        "y": 34.29
+                    },
+                    "uuid": "da0f2725-798c-4488-8a2c-39ebcdfe114d"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 13 [<no net>] of J1",
+                    "pos": {
+                        "x": 59.57,
+                        "y": 31.75
+                    },
+                    "uuid": "45fdbe90-400e-44c7-8b77-97f771779b03"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 14 [GND] of J1",
+                    "pos": {
+                        "x": 59.57,
+                        "y": 34.29
+                    },
+                    "uuid": "e9ba33e9-1f4e-43f7-b23c-4ecea7258109"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 15 [<no net>] of J1",
+                    "pos": {
+                        "x": 62.11,
+                        "y": 31.75
+                    },
+                    "uuid": "ab6bacf2-84dc-4c12-9493-d9bedb4b0958"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 16 [RADIO1_CS] of J1",
+                    "pos": {
+                        "x": 62.11,
+                        "y": 34.29
+                    },
+                    "uuid": "96d096b5-7da4-44f1-abba-e3df9f0e3c5c"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 17 [+3V3_IN] of J1",
+                    "pos": {
+                        "x": 64.65,
+                        "y": 31.75
+                    },
+                    "uuid": "3ad6be0d-a5d7-4270-afc8-ec95c15fb868"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 18 [RADIO1_FLEXB] of J1",
+                    "pos": {
+                        "x": 64.65,
+                        "y": 34.29
+                    },
+                    "uuid": "947cb3db-29dd-4adc-a656-3d6b5cfdb172"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 19 [SPI_MOSI] of J1",
+                    "pos": {
+                        "x": 67.19,
+                        "y": 31.75
+                    },
+                    "uuid": "590be2ee-725f-43c9-b2c0-367e162ae774"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 20 [GND] of J1",
+                    "pos": {
+                        "x": 67.19,
+                        "y": 34.29
+                    },
+                    "uuid": "b4a4a854-0358-4f47-a727-9bdcdf252bed"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 21 [SPI_MISO] of J1",
+                    "pos": {
+                        "x": 69.73,
+                        "y": 31.75
+                    },
+                    "uuid": "9980d125-8658-4041-8f71-aebf57db23ab"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 22 [<no net>] of J1",
+                    "pos": {
+                        "x": 69.73,
+                        "y": 34.29
+                    },
+                    "uuid": "459e42fb-e4d4-4129-a93d-2ba556e8d826"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 23 [SPI_SCK] of J1",
+                    "pos": {
+                        "x": 72.27,
+                        "y": 31.75
+                    },
+                    "uuid": "2782cbac-229a-4a73-b2de-fbd11acf109a"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 24 [TFT_CS] of J1",
+                    "pos": {
+                        "x": 72.27,
+                        "y": 34.29
+                    },
+                    "uuid": "f76cf7a2-296a-469e-9fab-8cdec2bf0642"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 25 [GND] of J1",
+                    "pos": {
+                        "x": 74.81,
+                        "y": 31.75
+                    },
+                    "uuid": "fe0d8ca6-ca7e-45e0-9b24-f209992caf8c"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 26 [TFT_DC] of J1",
+                    "pos": {
+                        "x": 74.81,
+                        "y": 34.29
+                    },
+                    "uuid": "97b772d9-5c97-4ab7-89b6-6ea66649416b"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 27 [I2C_SDA] of J1",
+                    "pos": {
+                        "x": 77.35,
+                        "y": 31.75
+                    },
+                    "uuid": "bf942d0f-dec2-425c-b8fc-9312dbcc61ee"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 28 [I2C_SCK] of J1",
+                    "pos": {
+                        "x": 77.35,
+                        "y": 34.29
+                    },
+                    "uuid": "6830badf-5722-4ab8-bcce-12304a0dac35"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 29 [TFT_RST] of J1",
+                    "pos": {
+                        "x": 79.89,
+                        "y": 31.75
+                    },
+                    "uuid": "7f6c8e88-f8f7-45b2-b4ad-44c24365ee34"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad 30 [GND] of J1",
+                    "pos": {
+                        "x": 79.89,
+                        "y": 34.29
+                    },
+                    "uuid": "e278cfa2-24fe-45d7-a29d-1422bc4a1318"
+                },
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 45.5,
+                        "y": 55.5
+                    },
+                    "uuid": "fa8a930a-9f8a-40c2-8c4c-2a4f1f08ad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 87.6,
+                        "y": 20.0
+                    },
+                    "uuid": "0b5e31d2-b284-44a4-a343-abfed744b9db"
+                },
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 2.5,
+                        "y": 30.5
+                    },
+                    "uuid": "50707156-0d47-4c8e-914d-b160fec5b938"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 87.6,
+                        "y": 20.0
+                    },
+                    "uuid": "0b5e31d2-b284-44a4-a343-abfed744b9db"
+                },
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 88.5,
+                        "y": 80.5
+                    },
+                    "uuid": "9c77d00a-f42a-401e-9f73-46be47af84fc"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J8 on F.Silkscreen",
+                    "pos": {
+                        "x": 3.62,
+                        "y": 88.89
+                    },
+                    "uuid": "017f076c-f257-4586-a506-4db44edd8388"
+                },
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 88.5,
+                        "y": 80.5
+                    },
+                    "uuid": "9c77d00a-f42a-401e-9f73-46be47af84fc"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J8 on F.Silkscreen",
+                    "pos": {
+                        "x": 6.38,
+                        "y": 88.89
+                    },
+                    "uuid": "8a8e1001-adea-4bec-a72a-3cfb32315564"
+                },
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 88.5,
+                        "y": 80.5
+                    },
+                    "uuid": "9c77d00a-f42a-401e-9f73-46be47af84fc"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 45.6,
+                        "y": 30.42
+                    },
+                    "uuid": "1eb2c6de-99a2-4ca5-b01b-b76e5bdf7e19"
+                },
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 2.5,
+                        "y": 30.5
+                    },
+                    "uuid": "50707156-0d47-4c8e-914d-b160fec5b938"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 2.5,
+                        "y": 30.5
+                    },
+                    "uuid": "50707156-0d47-4c8e-914d-b160fec5b938"
+                },
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 81.22,
+                        "y": 35.62
+                    },
+                    "uuid": "82d7b504-5871-4ae9-b4a6-98ec4c2726ef"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 2.5,
+                        "y": 30.5
+                    },
+                    "uuid": "50707156-0d47-4c8e-914d-b160fec5b938"
+                },
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 43.0,
+                        "y": 31.75
+                    },
+                    "uuid": "f8078dbe-f726-412e-9f78-f26116a69f38"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 2.5,
+                        "y": 30.5
+                    },
+                    "uuid": "50707156-0d47-4c8e-914d-b160fec5b938"
+                },
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 45.6,
+                        "y": 33.02
+                    },
+                    "uuid": "b6dbbd0e-c08b-4476-bd47-239cbd4f252d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 2.5,
+                        "y": 30.5
+                    },
+                    "uuid": "50707156-0d47-4c8e-914d-b160fec5b938"
+                },
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 43.0,
+                        "y": 30.42
+                    },
+                    "uuid": "9710c652-72c1-4c16-b351-ed0fd264e5cd"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of J3 on F.Silkscreen",
+                    "pos": {
+                        "x": 88.5,
+                        "y": 80.5
+                    },
+                    "uuid": "9c77d00a-f42a-401e-9f73-46be47af84fc"
+                },
+                {
+                    "description": "PTH pad 5 [JOY_SW] of J8",
+                    "pos": {
+                        "x": 5.0,
+                        "y": 80.0
+                    },
+                    "uuid": "d5fa9252-f1d5-4659-960e-cc1f3dc1662c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of J2",
+                    "pos": {
+                        "x": 41.53,
+                        "y": 78.71
+                    },
+                    "uuid": "875f7646-69b9-497d-ae8a-2b21de18ead7"
+                },
+                {
+                    "description": "NPTH pad of H3",
+                    "pos": {
+                        "x": 40.19,
+                        "y": 76.98
+                    },
+                    "uuid": "87956fe3-f6e7-41c7-9aac-24acea38dc6e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of J1",
+                    "pos": {
+                        "x": 41.56,
+                        "y": 33.02
+                    },
+                    "uuid": "cc45bbd6-61aa-4af5-8fe1-30d1bec2bf64"
+                },
+                {
+                    "description": "NPTH pad of H1",
+                    "pos": {
+                        "x": 40.19,
+                        "y": 33.18
+                    },
+                    "uuid": "cc3d2209-e48f-4d1a-b8a4-9e79829f1ddd"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

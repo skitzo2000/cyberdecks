@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "a7s")(type "KiCad")(uri "${KIPRJMOD}/../a7s.pretty")(options "")(descr "project footprints: RP2040_Zero, TFT_2p8"))
+)
