@@ -12,13 +12,15 @@ radios, an input MCU, a touchscreen, and a Flipper-compatible expansion header.
 
 ## Preview
 
-Exploded 3D assembly (rough render, real STEP models). Top → bottom:
+3D renders (rough, real STEP models) — both faces of the shield:
 
-- **2.8" TFT screen** (front, user-facing)
-- **the backplane** — buttons + Flipper socket on the **front**; connector headers + RP2040 + radios on the **back**
-- **the Radxa Cubie A7S** it mounts onto
+**Top (deck face)** — 2.8" TFT screen, 4 buttons, Flipper socket:
 
-![exploded assembly](kicad/render_full.png)
+![top](kicad/render_full.png)
+
+**Underside** — RP2040, radio sockets (+ a module), the A7S sockets (J1/J2) the Radxa Cubie A7S plugs into, radio caps/fuses, and the joystick/encoder/button solder pads:
+
+![underside](kicad/render_underside.png)
 
 ---
 
