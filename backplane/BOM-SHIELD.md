@@ -3,6 +3,9 @@
 Parts to populate the **backplane PCB itself**. Derived from the live netlist
 (`a7s_backplane.net`) — all through-hole, no SMD, no ICs, no resistors.
 
+**Mounting side:** connector headers (J1/J2, J5/J6, J8, J10, J11) and the RP2040 are on the **back**;
+the screen, Flipper socket, and the 4 push-buttons are on the **front**.
+
 - **No prices here** — this is a parts list to start sourcing from.
 - **Sourcing links are options for review, not picks.** Each links a search/category or a
   canonical product page so you can choose the exact part. Confirm pitch, pin count, and
@@ -57,19 +60,21 @@ Parts to populate the **backplane PCB itself**. Derived from the live netlist
 
 | Ref | Item | Spec / package | Qty | Sourcing options |
 |---|---|---|--:|---|
-| J8 | Header 1×5 (analog joystick) | 2.54 mm, THT | 1 | [LCSC](https://www.lcsc.com/search?q=1x5%20header%202.54) · [Amazon](https://www.amazon.com/s?k=1x5+pin+header+2.54mm) |
-| J10 | Header 1×4 (rotary encoder) | 2.54 mm, THT | 1 | [LCSC](https://www.lcsc.com/search?q=1x4%20header%202.54) · [Amazon](https://www.amazon.com/s?k=1x4+pin+header+2.54mm) |
-| J11 | Header 1×4 (aux buttons 5/6) | 2.54 mm, THT | 1 | [LCSC](https://www.lcsc.com/search?q=1x4%20header%202.54) · [Amazon](https://www.amazon.com/s?k=1x4+pin+header+2.54mm) |
+| J8 | 1×5 solder pads (analog joystick) | 2.54 mm THT holes | — | no part — solder wires directly |
+| J10 | 1×4 solder pads (rotary encoder) | 2.54 mm THT holes | — | no part — solder wires directly |
+| J11 | 1×4 solder pads (aux buttons 5/6) | 2.54 mm THT holes | — | no part — solder wires directly |
 
-> Pick male pins or female sockets to match how you wire the casing-mounted parts.
+> **No headers here** — these are bare solder holes; the joystick/encoder/buttons are casing-mounted and
+> wired straight to the pads (the modules themselves are in the [deck BOM](./BOM-DECK.md)).
 
 ## Flipper expansion header
 
 | Ref | Item | Spec / package | Qty | Sourcing options |
 |---|---|---|--:|---|
-| J12 | Pin header 1×8 + 1×10 (Flipper GPIO, 17.78 mm gap) | 2.54 mm, THT | 1 set | [LCSC](https://www.lcsc.com/search?q=male%20header%202.54%20single%20row) · [DigiKey](https://www.digikey.com/en/products/result?keywords=breakaway%20header%202.54mm) · [Amazon](https://www.amazon.com/s?k=2.54mm+single+row+pin+header+breakaway) |
+| J12 | **Female socket** 1×8 + 1×10 (Flipper GPIO, 17.78 mm gap), on the front | 2.54 mm, THT | 1 set | [LCSC](https://www.lcsc.com/search?q=1x10%20female%20header%202.54) · [DigiKey](https://www.digikey.com/en/products/result?keywords=1x8%20female%20header%202.54mm) · [Amazon](https://www.amazon.com/s?k=2.54mm+female+header+single+row) |
 
-> Gender (male pins vs female socket) must match your Flipper-ecosystem accessory.
+> Two single-row **female** sockets matching the Flipper Zero top-edge GPIO layout — 1×8 + 1×10 with the
+> 17.78 mm gap. (Footprint holes are shared with a male header, so the layout is the same either way.)
 
 ## Passives
 

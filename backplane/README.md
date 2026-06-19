@@ -12,15 +12,13 @@ radios, an input MCU, a touchscreen, and a Flipper-compatible expansion header.
 
 ## Preview
 
-> Rough 3D render — real STEP models for the 2.8" screen and the RP2040-Zero; radios shown standing off the back per the design intent. The floorplan is still a WIP.
+Exploded 3D assembly (rough render, real STEP models). Top → bottom:
 
-| Front — screen + buttons | Back — RP2040, radios, power |
-|---|---|
-| ![front](kicad/render_front3d.png) | ![back](kicad/render_back3d.png) |
+- **2.8" TFT screen** (front, user-facing)
+- **the backplane** — buttons + Flipper socket on the **front**; connector headers + RP2040 + radios on the **back**
+- **the Radxa Cubie A7S** it mounts onto
 
-Top-down board view:
-
-![top-down](kicad/render_top.png)
+![exploded assembly](kicad/render_full.png)
 
 ---
 
@@ -31,7 +29,7 @@ Top-down board view:
 | **2× "8+1" radio sockets** | Shared SPI1. Drop-in for **nRF24L01+ / CC1101 / CC2500** (8-pin nRF24 pin order + an AUX pin 9 for ESP-01 / breadboard use). Both radios can run simultaneously. |
 | **RP2040-Zero input MCU** | Human inputs **only** — 4 on-board buttons + 2 off-board, joystick, rotary encoder. It is *not* a radio bridge; every radio line maps straight to an A7S header pin. |
 | **2.8" SPI TFT** | ILI9341 display with resistive (XPT2046) touch. |
-| **Flipper GPIO header** | Real two-connector layout (1×8 + 1×10, 17.78 mm gap) so genuine Flipper-ecosystem add-ons mate. |
+| **Flipper GPIO header** | Real two-connector layout (1×8 + 1×10, 17.78 mm gap) as a **female socket**, on the front, so genuine Flipper-ecosystem add-ons mate. |
 | **Power** | Taps **5 V and 3V3 from the A7S header** (an external battery powers the A7S over its own USB-C port). Radio rails are polyfused. |
 
 ## Design choices
@@ -80,9 +78,12 @@ Yes its a lot of IO, I wanted to max out what was available in the friendliest w
 
 ## Before you fabricate
 
+**Board sides:** connector headers (J1/J2 A7S, J5/J6 radios, J8 joystick, J10 encoder, J11 buttons) and
+the RP2040 are on the **back**; the screen, Flipper socket, and the 4 push-buttons are on the **front**.
+
 This board has **not** been fab-verified. Check these first:
 
-1. **Floorplan is a WIP.** Placement and routing are a routed starting point — do a manual
+1. **Floorplan is a WIP.** Sides are set, but placement/routing are a routed starting point — do a manual
    placement/route refinement pass in the KiCad GUI before ordering.
 2. **RP2040-Zero footprint row spacing** is assumed **15.24 mm** — confirm against your actual module.
 3. **Header pin-1 orientation** vs the A7S must be verified so the shield mates the right way round
@@ -93,9 +94,8 @@ This board has **not** been fab-verified. Check these first:
    backplane** (antennas up), oriented **90° to the Flipper headers**. Keep them clear of the A7S board
    outline and the SPI header.
 5. **Flipper headers — 2 connectors, on the front.** The Flipper GPIO is *two* headers — **1×8 + 1×10
-   with a fixed 17.78 mm gap** between them — standing up at **90° to the deck** (i.e. 90° from the radio
-   modules above). Keep that spacing exact so genuine Flipper accessories mate, and match pin gender to
-   your accessory.
+   with a fixed 17.78 mm gap** between them, populated as a **female socket** — standing up at **90° to the
+   deck** (i.e. 90° from the radio modules). Keep that spacing exact so genuine Flipper accessories mate.
 6. **DRC:** the display-body courtyard floats over the back-side parts, so `pth_inside_courtyard` items
    are expected/cosmetic — distinguish those from real clearance errors.
 
