@@ -93,7 +93,7 @@ anchors = {
 # passives packed on the BACK, under the screen, beside the RP2040 (internal, no access)
 PACK_REGION  = (6.0, 24.0, 36.0)   # x_left, y_top, x_right (back, under display, left of A1)
 PACK_ON_BACK = True
-BACK_REFS    = {"A1"}              # ONLY the RP2040 + passives go on the back/under-screen
+BACK_REFS    = {"A1","J1","J2","J5","J5b","J6","J6b","J8","J10","J11"}  # connector headers + RP2040 on the BACK; screen/Flipper/buttons stay front
 ORIGIN_REFS  = {"J3"}             # custom fp, origin=body center -> place by origin (full-width body)
 
 # ---- placement helpers (SetPosition sets ORIGIN=pad1, so we correct to bbox CENTER) ----
