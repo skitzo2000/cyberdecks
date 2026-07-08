@@ -1,5 +1,13 @@
 # A7S Cyberdeck Backplane (Shield) — Design + BOM
 
+> **Shared across revisions.** This is the electrical/design doc — its connectivity, pin maps, buses, and
+> power tree apply to **both [rev1](REV1.md) and [rev2](REV2.md)** (they have an identical netlist). The
+> **as-built physical layout** (A7S orientation, floorplan, fab package) is per-rev — see **[REV2.md](REV2.md)**
+> for the current board. Note: §9's 50.8 mm figure and the *dual-strip* ambidextrous scheme are the *early
+> design vision*; the as-built board is a **single fixed layout** (86.35 × 74.25 mm, one control strip) whose
+> handedness is a **180° whole-deck rotation, not a mirror** (see §9 "Handedness — AS BUILT"). Layout /
+> fab / renders live in the rev docs.
+
 **Target:** Radxa Cubie A7S (Allwinner A733, `sun60iw2p1`). The backplane is a **shield** that
 plugs onto the A7S **30-pin (2×15)** and **15-pin (1×15)** GPIO headers and forms the front face of
 the deck.
@@ -327,10 +335,21 @@ the A7S right edge → ports exposed.
 - **Clearance:** shield right edge by the A7S right edge → USB-C/USB-A/RJ45 exposed; keep the radios
   within the overhang (not past the right edge into the ports). Left overhang clears the camera FPC.
 
-### Ambidextrous setup — duplicated top/bottom strips + 180° deck rotation
+### Handedness — AS BUILT: single strip + 180° deck rotation (a compromise)
+> **What was actually built (rev1/rev2):** handedness is achieved by **physically rotating the whole deck
+> 180°** (and flipping the display in firmware) — **not** by a mirrored board and **not** by the duplicated
+> top/bottom strips sketched below. A true **left/right mirror was rejected for wiring reasons** (mirroring
+> the layout complicates the off-board control harness and the routing). The as-built board therefore carries
+> a **single control strip** (one set of buttons SW1–4, one J-IN/J-BRK field), and the "other hand" is just
+> the same deck turned 180°. The dual-strip scheme below is the **earlier design vision**, kept as context.
+
+The 180°-rotation compromise has a known tradeoff: a 180° rotation swaps left↔right **and** top↔bottom, so
+the single button strip moves from below the screen to above it in the flipped orientation. The original
+plan to avoid that was to duplicate the strip on both edges:
+
 A 180° rotation swaps left↔right **and** top↔bottom, so under-screen buttons would land *over* the screen.
-Fix: the control strip (4 buttons + 2 radios + J-IN + J-BRK) has **footprints on BOTH the top and bottom
-overhangs**, wired to the same nets. Build-time handedness:
+Fix (design vision, **not built**): the control strip (4 buttons + 2 radios + J-IN + J-BRK) has **footprints
+on BOTH the top and bottom overhangs**, wired to the same nets. Build-time handedness:
 
 | Build | Populate strip | Deck | Display | Result |
 |---|---|---|---|---|

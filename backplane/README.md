@@ -4,23 +4,25 @@ A hand-solderable backplane **shield for the [Radxa Cubie A7S](https://radxa.com
 (Allwinner A733). It fans the A7S's 45 header pins out into a cyberdeck I/O board: dual swappable
 radios, an input MCU, a touchscreen, and a Flipper-compatible expansion header.
 
-> **Status:** schematic/netlist complete and verified; PCB placed and **fully routed** (0 unconnected) in a
-> right-handed layout (A7S inverted, USB-C on the left). Not yet fab-verified — see
-> [Before you fabricate](#before-you-fabricate) before ordering boards.
+> **Current board: [rev2](REV2.md)** — schematic/netlist complete and verified; PCB placed and **fully
+> routed** (0 unconnected); fab package generated. **Not yet fab-verified** — see the rev2
+> [Before you fabricate](REV2.md#before-you-fabricate) checklist before ordering.
 
 ---
 
-## Preview
+## Revisions
 
-3D renders (rough, real STEP models) — both faces of the shield:
+The two revisions share a **byte-for-byte identical netlist / schematic / BOM** — only the physical layout
+differs. All the electrical docs below apply to both; each rev doc covers just what's version-specific
+(layout, fab files, renders, status).
 
-**Top (deck face)** — 2.8" TFT screen, 4 buttons, Flipper socket:
+| Rev | Status | What / why | Doc |
+|---|---|---|---|
+| **rev2** | **current** | A7S rotated 180° so USB-C/USB-A/RJ45 **ports face outward**; mount shifted 3 mm for edge clearance | **[REV2.md](REV2.md)** |
+| rev1 | frozen / superseded | original layout — **ports face inward** into the radios (mistake); kept for reference only, **do not fab** | [REV1.md](REV1.md) |
 
-![top](kicad/render_full.png)
-
-**Underside** — RP2040, the two radio sockets (nRF24/CC1101/CC2500 plug in here), the A7S sockets (J1/J2) the Radxa Cubie A7S plugs into, radio caps/fuses, and the joystick/encoder/button solder pads:
-
-![underside](kicad/render_underside.png)
+**Shared (both revs):** [SCHEMATIC.md](SCHEMATIC.md) · [SCHEMATIC-DIAGRAM.md](SCHEMATIC-DIAGRAM.md) ·
+[BACKPLANE-DESIGN.md](BACKPLANE-DESIGN.md) · [BOM-SHIELD.md](BOM-SHIELD.md) · [BOM-DECK.md](BOM-DECK.md)
 
 ---
 
@@ -45,12 +47,16 @@ radios, an input MCU, a touchscreen, and a Flipper-compatible expansion header.
 ## Repository layout
 
 ```
-BACKPLANE-DESIGN.md      full design doc
+README.md                this index
+REV2.md                  rev2 board — current (layout, fab package, verification)
+REV1.md                  rev1 board — frozen / superseded (the port-orientation mistake)
+BACKPLANE-DESIGN.md      full design doc  (shared — netlist identical across revs)
+SCHEMATIC.md             authoritative netlist / connectivity (source of truth)
+SCHEMATIC-DIAGRAM.md     generated connectivity + bus diagrams
 BOM-SHIELD.md            shield parts list (sourcing links, no prices)
 BOM-DECK.md              full-deck system parts list (sourcing links, no prices)
-SCHEMATIC.md             authoritative netlist / connectivity (source of truth)
 a7s_backplane_skidl.py   netlist generator  ->  a7s_backplane.net
-kicad/                   pcbnew board, build_pcb.py, renders
+kicad/                   pcbnew boards, build_pcb.py, gerbers, fab_rev2/, renders
 a7s.pretty/              custom footprints (TFT, RP2040-Zero, Flipper — see ATTRIBUTION.md)
 refs/                    measured mechanical datums
 tools/                   kpython wrapper (runs pcbnew against the nix KiCad libs)
@@ -59,7 +65,7 @@ tools/                   kpython wrapper (runs pcbnew against the nix KiCad libs
 ## Build / regenerate
 
 ```sh
-# 1. netlist (after editing the schematic)
+# 1. netlist (after editing the schematic) — shared by both revs
 skidl-python a7s_backplane_skidl.py            # -> a7s_backplane.net
 
 # 2. board from the netlist
@@ -71,39 +77,15 @@ freerouting -de kicad/a7s_backplane.dsn -do kicad/a7s_backplane.ses -mp 100 -mt 
 tools/kpython -c "import pcbnew;b=pcbnew.LoadBoard('kicad/a7s_backplane.kicad_pcb');pcbnew.ImportSpecctraSES(b,'kicad/a7s_backplane.ses');pcbnew.SaveBoard('kicad/a7s_backplane.kicad_pcb',b)"
 ```
 
+> The current board (rev2) was built from the frozen rev1 layout with a one-shot rotate + shift, then
+> re-routed — see [REV2.md § Regenerating](REV2.md#regenerating-rev2). Do **not** re-run `build_pcb.py`
+> against a routed board (it emits a placed-but-unrouted board and loses all routing).
+
 ## Additional Notes
 
 I think the radio headers belong in the left top corner so that any radio chips you plug in will be standing up vertically behind the deck & 90 degrees from the flipper headers becuase radio likes angles.
 
 Yes its a lot of IO, I wanted to max out what was available in the friendliest way possible supporting cheap available modules that already exist in the market.
-
-
-## Before you fabricate
-
-**Layout (right-handed):** the A7S mounts on the **LEFT** with its **USB-C / ports facing left**, so the
-board overhang is on the **right**. Joystick (J8) + extra buttons (J11) on the **right**, encoder (J10)
-**bottom-left**, the 4 face buttons along the **bottom**, Flipper on the **front-left**, screen **centered**
-(its image is rotated 180° in firmware to suit the inverted A7S).
-
-**Board sides:** the connector headers (J1/J2 A7S, J5/J6 radios, J8 joystick, J10 encoder, J11 buttons) and
-the RP2040 are on the **back**; the screen, Flipper socket, and the 4 push-buttons are on the **front**.
-
-This board has **not** been fab-verified. Check these first:
-
-1. **Floorplan** is settled (right-handed, A7S inverted) and routed — but still give it a review pass in the
-   KiCad GUI before ordering.
-2. **RP2040-Zero footprint row spacing** is assumed **15.24 mm** — confirm against your actual module.
-3. **Header pin-1 orientation** vs the A7S must be verified so the shield mates the right way round
-   (datum *centers* are exact; pin-1 end/row is not yet confirmed — see `refs/MECH-DATUMS.md`).
-4. **Radio headers — 2× "8+1", back, top-right.** Two *separate* 8-pin (2×4) sockets, each with its
-   **AUX (+1) pin** beside it. They sit at the top-right and are oriented **90° to each other** — one module
-   extends up off the top edge, the other off the right edge — giving flexible three-way module positioning.
-   Cheap nRF24 / CC1101 / CC2500 modules (flat, ~15.5 × 29 mm) plug straight in. Clear of the A7S + each other.
-5. **Flipper header — front-left, female socket.** The Flipper GPIO is *two* connectors — **1×8 + 1×10 with a
-   fixed 17.78 mm gap** — populated as a **female socket** (mirrors the Flipper Zero's own female top). It's on
-   the **front**, so it's on the opposite face from the back-mounted radios (no collision). Keep the spacing exact.
-6. **DRC:** the display-body courtyard floats over the back-side parts, so `pth_inside_courtyard` items
-   are expected/cosmetic — distinguish those from real clearance errors.
 
 ## Credits
 

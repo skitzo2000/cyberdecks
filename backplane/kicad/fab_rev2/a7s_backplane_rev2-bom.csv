@@ -1,0 +1,15 @@
+Item,Qty,Value,Footprint,References
+1,2,0.1uF,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm,"C1,C2"
+2,1,BTN5_6,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,J11
+3,2,Conn_01x01,Connector_Pin:Pin_D1.0mm_L10.0mm,"J5b,J6b"
+4,1,Conn_01x14,a7s:TFT_2p8,J3
+5,1,Conn_01x15,Connector_PinSocket_2.54mm:PinSocket_1x15_P2.54mm_Vertical,J2
+6,2,Conn_02x04_Odd_Even,Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical,"J5,J6"
+7,1,Conn_02x15_Odd_Even,Connector_PinSocket_2.54mm:PinSocket_2x15_P2.54mm_Vertical,J1
+8,1,ENC,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,J10
+9,1,FLIPPER,a7s:FLIPPER-GPIO-18,J12
+10,1,JOY,Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical,J8
+11,2,MF-R050 0.5A,Fuse:Fuse_Bourns_MF-RG300,"F1,F2"
+12,1,RP2040-Zero,a7s:RP2040_Zero,A1
+13,4,SW_Push,Button_Switch_THT:SW_PUSH_6mm,"SW1,SW2,SW3,SW4"
+14,2,TestPoint,TestPoint:TestPoint_Pad_D1.0mm,"TP1,TP2"
