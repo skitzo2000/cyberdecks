@@ -4,25 +4,44 @@ A hand-solderable backplane **shield for the [Radxa Cubie A7S](https://radxa.com
 (Allwinner A733). It fans the A7S's 45 header pins out into a cyberdeck I/O board: dual swappable
 radios, an input MCU, a touchscreen, and a Flipper-compatible expansion header.
 
-> **Current board: [rev2](REV2.md)** — schematic/netlist complete and verified; PCB placed and **fully
-> routed** (0 unconnected); fab package generated. **Not yet fab-verified** — see the rev2
-> [Before you fabricate](REV2.md#before-you-fabricate) checklist before ordering.
+> **Current board: v2** — schematic/netlist complete; PCB placed and **fully routed** (0 unconnected);
+> **DRC-clean**; fab package generated. It corrects the header-mirror short that made the earlier boards
+> DOA (see [What v2 fixed](#what-v2-fixed)). **Not yet fab-verified** — order it and it should power on.
+
+| | File |
+|---|---|
+| **Board (v2)** | [`kicad/a7s_backplane_routed.kicad_pcb`](kicad/a7s_backplane_routed.kicad_pcb) |
+| **Fab package** | [`kicad/a7s_backplane_v2_fab.zip`](kicad/a7s_backplane_v2_fab.zip) — upload to JLCPCB/PCBWay |
+| **Schematic (editable)** | [`a7s_backplane.kicad_sch`](a7s_backplane.kicad_sch) · [PDF](a7s_backplane_schematic_kicad.pdf) |
+| **Renders** | [`kicad/renders/routed_top.png`](kicad/renders/routed_top.png) · [`routed_bottom.png`](kicad/renders/routed_bottom.png) |
 
 ---
 
+## What v2 fixed
+
+The earlier boards (archived in [`v1/`](v1/)) mated the A7S GPIO headers **mirrored** — the shield's
+socket pin 1 landed where the A7S's pin 30 is. That put the A7S **+3V3 rail onto the shield's GND**, so
+the SBC dead-shorted and went dark the instant the shield was seated. v2 corrects it:
+
+- **30-pin (double) header → NORTH edge, 15-pin (single) → SOUTH edge, both mirrored east-west** so the
+  socket now mates the A7S pin-for-pin (shield pad *P* → A7S pin *P*; grounds land on grounds).
+- A7S cluster nudged **1.75 mm west** so the ethernet-port edge lines up with the PCB west edge (the
+  board rests on/at the RJ45).
+- Full silkscreen: every pin labeled tight to the pad, all grounds ringed.
+
+The **electrical design (netlist / schematic / BOM) is unchanged** across all revs — only the layout and
+this header-mate correction differ.
+
 ## Revisions
 
-The two revisions share a **byte-for-byte identical netlist / schematic / BOM** — only the physical layout
-differs. All the electrical docs below apply to both; each rev doc covers just what's version-specific
-(layout, fab files, renders, status).
-
-| Rev | Status | What / why | Doc |
+| Rev | Status | What | Where |
 |---|---|---|---|
-| **rev2** | **current** | A7S rotated 180° so USB-C/USB-A/RJ45 **ports face outward**; mount shifted 3 mm for edge clearance | **[REV2.md](REV2.md)** |
-| rev1 | frozen / superseded | original layout — **ports face inward** into the radios (mistake); kept for reference only, **do not fab** | [REV1.md](REV1.md) |
+| **v2** | **current — routed, DRC-clean, fab-ready** | header-mirror fixed, A7S aligned to board edge, full silk | *this folder* |
+| v1 | archived / **do not fab** | original rev1 (ports faced inward) + the rev2 respin — both still had the header-mirror short | [`v1/`](v1/) ([REV1](v1/REV1.md) · [REV2](v1/REV2.md)) |
 
-**Shared (both revs):** [SCHEMATIC.md](SCHEMATIC.md) · [SCHEMATIC-DIAGRAM.md](SCHEMATIC-DIAGRAM.md) ·
-[BACKPLANE-DESIGN.md](BACKPLANE-DESIGN.md) · [BOM-SHIELD.md](BOM-SHIELD.md) · [BOM-DECK.md](BOM-DECK.md)
+**Shared electrical docs (apply to all revs):** [SCHEMATIC.md](SCHEMATIC.md) ·
+[SCHEMATIC-DIAGRAM.md](SCHEMATIC-DIAGRAM.md) · [BACKPLANE-DESIGN.md](BACKPLANE-DESIGN.md) ·
+[BOM-SHIELD.md](BOM-SHIELD.md) · [BOM-DECK.md](BOM-DECK.md)
 
 ---
 
@@ -39,47 +58,67 @@ differs. All the electrical docs below apply to both; each rev doc covers just w
 ## Design choices
 
 - **All through-hole / hand-solder.** No SMD, no pick-and-place — it's a backplane you solder to.
-- **2-layer**, designed to be routed on two sides.
-- Schematic/netlist generated with **[SKiDL](https://github.com/devbisme/skidl)**; board built with the
-  KiCad **pcbnew** Python API; autorouted headless with **[freerouting](https://github.com/freerouting/freerouting)**.
+- **2-layer**, routed on both sides.
+- Schematic/netlist generated with **[SKiDL](https://github.com/devbisme/skidl)** (the source of truth);
+  board built/edited with the KiCad **pcbnew** Python API; autorouted headless with
+  **[freerouting](https://github.com/freerouting/freerouting)**.
 - A7S header geometry sits on **STEP-measured datums** (`refs/MECH-DATUMS.md`) so the shield mates correctly.
 
 ## Repository layout
 
 ```
-README.md                this index
-REV2.md                  rev2 board — current (layout, fab package, verification)
-REV1.md                  rev1 board — frozen / superseded (the port-orientation mistake)
-BACKPLANE-DESIGN.md      full design doc  (shared — netlist identical across revs)
-SCHEMATIC.md             authoritative netlist / connectivity (source of truth)
-SCHEMATIC-DIAGRAM.md     generated connectivity + bus diagrams
-BOM-SHIELD.md            shield parts list (sourcing links, no prices)
-BOM-DECK.md              full-deck system parts list (sourcing links, no prices)
-a7s_backplane_skidl.py   netlist generator  ->  a7s_backplane.net
-kicad/                   pcbnew boards, build_pcb.py, gerbers, fab_rev2/, renders
-a7s.pretty/              custom footprints (TFT, RP2040-Zero, Flipper — see ATTRIBUTION.md)
-refs/                    measured mechanical datums
-tools/                   kpython wrapper (runs pcbnew against the nix KiCad libs)
+README.md                     this index (v2)
+a7s_backplane_skidl.py        netlist generator (SOURCE OF TRUTH)  ->  a7s_backplane.net
+a7s_backplane.kicad_sch       editable KiCad schematic (generated from the netlist, opens in Eeschema)
+a7s_backplane_schematic_kicad.{pdf,png}   schematic exports (for people without KiCad)
+a7s_backplane_schematic.{svg,pdf,png}     graphviz connectivity/bus diagram
+BACKPLANE-DESIGN.md           full design doc + pin maps   (shared across revs)
+SCHEMATIC.md                  authoritative connectivity    (shared)
+BOM-SHIELD.md / BOM-DECK.md   parts lists (sourcing links)  (shared)
+kicad/
+  build_pcb.py                netlist -> initial placement (pcbnew); config-driven
+  a7s_backplane_routed.kicad_pcb   THE v2 board (routed, labeled, outline closed)
+  a7s_backplane_v2_fab.zip    gerbers + drills, ready to order
+  fab_v2/                     unzipped fab outputs
+  renders/                    3D top/bottom renders of v2
+  pipeline/                   this session's working intermediates (placement/route steps)
+  3d/                         STEP models (gitignored; large)
+a7s.pretty/                   custom footprints (TFT, RP2040-Zero, Flipper — see ATTRIBUTION.md)
+refs/                         measured mechanical datums
+tools/                        kpython (runs pcbnew against nix KiCad libs) + gen_kicad_schematic.py
+v1/                           ARCHIVE — old rev1 + rev2 boards/gerbers/fab/renders. Do not fab.
 ```
 
 ## Build / regenerate
 
+> **Full step-by-step + the exact scripts:** [`kicad/pipeline/README.md`](kicad/pipeline/README.md).
+> It documents precisely how v2 was made (header-mirror fix → hand-placement → re-net → freerouting →
+> silk → schematic → fab) with the one-off scripts in `kicad/pipeline/scripts/` and every gotcha.
+
+The electrical design lives in SKiDL; the **placement is hand-done in KiCad** (the autoplacer output is
+only a rough starting point). Quick version:
+
 ```sh
-# 1. netlist (after editing the schematic) — shared by both revs
-skidl-python a7s_backplane_skidl.py            # -> a7s_backplane.net
+# 1. netlist (after editing the schematic)  ->  a7s_backplane.net
+docker run --rm -e HOME=/tmp -v "$PWD":/work -w /work a7s-skidl python3 a7s_backplane_skidl.py
 
-# 2. board from the netlist
-tools/kpython kicad/build_pcb.py               # -> kicad/a7s_backplane.kicad_pcb
+# 2. editable KiCad schematic from the netlist (derived artifact)
+#    (needs kiutils + KICAD_SYM; see tools/gen_kicad_schematic.py header)
+python3 tools/gen_kicad_schematic.py            # -> a7s_backplane.kicad_sch
 
-# 3. route (headless): export DSN -> freerouting -> import SES
-tools/kpython -c "import pcbnew;b=pcbnew.LoadBoard('kicad/a7s_backplane.kicad_pcb');pcbnew.ExportSpecctraDSN(b,'kicad/a7s_backplane.dsn')"
-freerouting -de kicad/a7s_backplane.dsn -do kicad/a7s_backplane.ses -mp 100 -mt 4
-tools/kpython -c "import pcbnew;b=pcbnew.LoadBoard('kicad/a7s_backplane.kicad_pcb');pcbnew.ImportSpecctraSES(b,'kicad/a7s_backplane.ses');pcbnew.SaveBoard('kicad/a7s_backplane.kicad_pcb',b)"
+# 3. board: build_pcb.py gives a rough placement; the real layout is hand-edited in pcbnew.
+#    Then route headless (freerouting must run FOREGROUND):
+freerouting -de kicad/a7s_backplane_v2.dsn -do kicad/a7s_backplane_v2.ses -mp 15
+#    ...and import the .ses back with pcbnew.ImportSpecctraSES.
+#    NOTE: ImportSpecctraSES silently drops Edge.Cuts segments — re-verify the outline is closed.
+
+# 4. fab package
+kicad-cli pcb export gerbers -o kicad/fab_v2/ kicad/a7s_backplane_routed.kicad_pcb
+kicad-cli pcb export drill   -o kicad/fab_v2/ kicad/a7s_backplane_routed.kicad_pcb
 ```
 
-> The current board (rev2) was built from the frozen rev1 layout with a one-shot rotate + shift, then
-> re-routed — see [REV2.md § Regenerating](REV2.md#regenerating-rev2). Do **not** re-run `build_pcb.py`
-> against a routed board (it emits a placed-but-unrouted board and loses all routing).
+> Do **not** re-run `build_pcb.py` against a placed/routed board — it emits a rough placed-but-unrouted
+> board and discards the hand-placement + routing.
 
 ## Additional Notes
 

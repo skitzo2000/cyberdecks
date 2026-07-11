@@ -1,19 +1,28 @@
-# KiCad local state / lock files — never publish
-*.kicad_prl
-*.lck
-~*.lck
-fp-info-cache
-
-# build / autoroute scratch
-*.dsn
-*.ses
-drc*.json
-*-drc.rpt
+# build / tool scratch
 __pycache__/
 *.pyc
 *.log
 *.erc
 
+# KiCad autosave, local state, lock files, autoroute scratch
+kicad/.history/
+*.kicad_prl
+*.lck
+~*.lck
+*.dsn
+*.ses
+drc*.json
+*-drc.rpt
+*-backups/
+fp-info-cache
+
 # 3D render working files (large vendor STEPs + render-only board)
 kicad/3d/
 *_render.kicad_pcb
+
+# FreeCAD assembly scratch + test renders + pcbnew history
+*.FCStd
+*.FCStd1
+*.FCBak
+kicad/.history
+kicad/render_*test*.png

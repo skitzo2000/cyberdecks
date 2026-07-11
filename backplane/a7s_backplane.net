@@ -1,9 +1,9 @@
 (export 
   (version "D")
   (design
-    (source "a7s_backplane_skidl.py")
-    (date "06/19/2026 07:52 AM")
-    (tool "SKiDL (2.2.1)")
+    (source "_gen_sch.py")
+    (date "07/10/2026 05:02 AM")
+    (tool "SKiDL (2.2.3)")
     (sheet
       (number 1)
       (name "/")
@@ -13,7 +13,7 @@
         (company)
         (rev)
         (date)
-        (source "a7s_backplane_skidl.py")
+        (source "_gen_sch.py")
         (comment
           (number "1")
           (value ""))
@@ -55,16 +55,16 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "ccHy6Y7hNl")
+          (name "SKiDL Tag") "oZoVrh4V2v")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:136"))
+          (name "SKiDL Line") "_gen_sch.py:136"))
       (libsource
         (lib "NO_LIB")
         (part "RP2040_Zero"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "1fccb3d5-1731-51f7-86e5-0e82763b7376"))
+      (tstamps "b0bc60c1-ca0b-56a6-9bfb-f8cc19f202c4"))
     (comp
       (ref "C1")
       (value "0.1uF")
@@ -76,18 +76,18 @@
         (field
           (name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "cGPFWHV252")
+          (name "SKiDL Tag") "5m145xRTpv")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:40"))
+          (name "SKiDL Line") "_gen_sch.py:40"))
       (libsource
         (lib "Device")
         (part "C"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "4626778c-42d7-5157-b357-d33433858b77"))
+      (tstamps "5cf3a6f6-2e17-51bd-bbbe-9684e588729e"))
     (comp
       (ref "C2")
       (value "0.1uF")
@@ -99,18 +99,18 @@
         (field
           (name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "P4H9yZgzjA")
+          (name "SKiDL Tag") "5FerYGpPuI")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:40"))
+          (name "SKiDL Line") "_gen_sch.py:40"))
       (libsource
         (lib "Device")
         (part "C"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "03fa0dd4-d90d-51bb-931b-522ca2354604"))
+      (tstamps "cdc1d4c8-dd1a-5697-bfbe-7b4e166ab85b"))
     (comp
       (ref "F1")
       (value "MF-R050 0.5A")
@@ -122,18 +122,18 @@
         (field
           (name "Footprint") "Fuse:Fuse_Bourns_MF-RG300")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "HeSzOyMyj6")
+          (name "SKiDL Tag") "IBO7nN2yhI")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:97"))
+          (name "SKiDL Line") "_gen_sch.py:97"))
       (libsource
         (lib "Device")
         (part "Polyfuse"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "fd0f9d02-1487-53f3-984f-f0b774a667e5"))
+      (tstamps "de55a68d-f0fb-5409-bc18-c4d152a10f52"))
     (comp
       (ref "F2")
       (value "MF-R050 0.5A")
@@ -145,18 +145,18 @@
         (field
           (name "Footprint") "Fuse:Fuse_Bourns_MF-RG300")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "sSWl1psqv5")
+          (name "SKiDL Tag") "wRRgAmdchD")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:98"))
+          (name "SKiDL Line") "_gen_sch.py:98"))
       (libsource
         (lib "Device")
         (part "Polyfuse"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "f0f72b99-fec2-5e70-94ec-1a053dbd4804"))
+      (tstamps "50fdc16f-6699-5784-83cd-a31cae092ca7"))
     (comp
       (ref "J1")
       (value "Conn_02x15_Odd_Even")
@@ -168,18 +168,18 @@
         (field
           (name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_2x15_P2.54mm_Vertical")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "1CWotcW9ol")
+          (name "SKiDL Tag") "er_h6Ifyq7")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:69"))
+          (name "SKiDL Line") "_gen_sch.py:69"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_02x15_Odd_Even"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "9ef45c27-1917-56a9-a1c3-0cfad1a41d15"))
+      (tstamps "b9d46892-11f0-5b60-bebf-6f15d0e9c4c7"))
     (comp
       (ref "J10")
       (value "ENC")
@@ -191,18 +191,18 @@
         (field
           (name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "brut1vlAcS")
+          (name "SKiDL Tag") "ap91GBL6Nc")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:161"))
+          (name "SKiDL Line") "_gen_sch.py:161"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_01x04"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "89c280e2-c8ea-5bc8-9dde-4102d9167b26"))
+      (tstamps "ccd441c8-3ccd-5df9-9a7f-fb2d4f1c7cde"))
     (comp
       (ref "J11")
       (value "BTN5_6")
@@ -214,18 +214,18 @@
         (field
           (name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "u2jx5Sj_ia")
+          (name "SKiDL Tag") "q7ZzGHLVHb")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:166"))
+          (name "SKiDL Line") "_gen_sch.py:166"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_01x03"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "f13b8b06-db01-50ea-88e5-96fd5c48fcce"))
+      (tstamps "a6fccfc9-cfb8-54c2-b170-2baf623dc78c"))
     (comp
       (ref "J12")
       (value "FLIPPER")
@@ -237,18 +237,18 @@
         (field
           (name "Footprint") "a7s:FLIPPER-GPIO-18")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "NSUnxHEtvJ")
+          (name "SKiDL Tag") "u7OuuT2n1E")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:180"))
+          (name "SKiDL Line") "_gen_sch.py:180"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_01x18"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "d39d4e50-ef48-52d9-afe6-8b39cac29d86"))
+      (tstamps "5995b518-8fc1-515b-b8f0-153fb95d5f93"))
     (comp
       (ref "J2")
       (value "Conn_01x15")
@@ -260,18 +260,18 @@
         (field
           (name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x15_P2.54mm_Vertical")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "QLJeHW68BR")
+          (name "SKiDL Tag") "q4pjvShf2D")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:71"))
+          (name "SKiDL Line") "_gen_sch.py:71"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_01x15"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "0d72eb00-f9bf-5f4b-9dfa-0712cb89867a"))
+      (tstamps "958bc83e-6444-5ecf-a1c3-5e883662a230"))
     (comp
       (ref "J3")
       (value "Conn_01x14")
@@ -283,18 +283,18 @@
         (field
           (name "Footprint") "a7s:TFT_2p8")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "y7r4mGzpo1")
+          (name "SKiDL Tag") "AzqkM23lYB")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:106"))
+          (name "SKiDL Line") "_gen_sch.py:106"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_01x14"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "744285c0-a40e-5816-963b-e702addf2908"))
+      (tstamps "8e2adb5e-8e67-58e6-9181-c08e2924f780"))
     (comp
       (ref "J5")
       (value "Conn_02x04_Odd_Even")
@@ -306,18 +306,18 @@
         (field
           (name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "QGsF5Py1lO")
+          (name "SKiDL Tag") "ajFHU8ysrd")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:118"))
+          (name "SKiDL Line") "_gen_sch.py:118"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_02x04_Odd_Even"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "1b846b8a-832d-5d12-bee3-5359a2c03026"))
+      (tstamps "1c900e4e-9bfc-55b2-8fb3-491087619232"))
     (comp
       (ref "J5b")
       (value "Conn_01x01")
@@ -329,18 +329,18 @@
         (field
           (name "Footprint") "Connector_Pin:Pin_D1.0mm_L10.0mm")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "iUOJZVFFhL")
+          (name "SKiDL Tag") "ay_2oE1v0E")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:125"))
+          (name "SKiDL Line") "_gen_sch.py:125"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_01x01"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "3ac8d03e-d156-523d-a5fd-0123801b07ff"))
+      (tstamps "a7351325-33f7-5717-9164-4de1f281164a"))
     (comp
       (ref "J6")
       (value "Conn_02x04_Odd_Even")
@@ -352,18 +352,18 @@
         (field
           (name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "NwnUME29jJ")
+          (name "SKiDL Tag") "pwuxZ2naax")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:118"))
+          (name "SKiDL Line") "_gen_sch.py:118"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_02x04_Odd_Even"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "c1b63c71-fabe-52a0-9f2c-cba1fe0389ba"))
+      (tstamps "fd069d65-236e-5277-be3d-044b3d58c3cb"))
     (comp
       (ref "J6b")
       (value "Conn_01x01")
@@ -375,18 +375,18 @@
         (field
           (name "Footprint") "Connector_Pin:Pin_D1.0mm_L10.0mm")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "YcnpCA0s5P")
+          (name "SKiDL Tag") "lC2tQfiw1m")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:126"))
+          (name "SKiDL Line") "_gen_sch.py:126"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_01x01"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "fbd41435-62c4-5976-8524-f0f3558e5319"))
+      (tstamps "22827c12-5394-57e8-8af4-a2fcfd506985"))
     (comp
       (ref "J8")
       (value "JOY")
@@ -398,18 +398,18 @@
         (field
           (name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "eV9ES8YGFr")
+          (name "SKiDL Tag") "WNS_z30arZ")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:156"))
+          (name "SKiDL Line") "_gen_sch.py:156"))
       (libsource
         (lib "Connector_Generic")
         (part "Conn_01x05"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "bdc91a66-4388-50e7-9d46-163a6696391f"))
+      (tstamps "c593d9a0-5c83-5471-821e-14dc7600b8db"))
     (comp
       (ref "SW1")
       (value "SW_Push")
@@ -421,18 +421,18 @@
         (field
           (name "Footprint") "Button_Switch_THT:SW_PUSH_6mm")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "l8xkK_zcfK")
+          (name "SKiDL Tag") "gYslbZ8GrL")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:150"))
+          (name "SKiDL Line") "_gen_sch.py:150"))
       (libsource
         (lib "Switch")
         (part "SW_Push"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "f090964d-7e7d-521c-a0f9-b4f4197b2811"))
+      (tstamps "ab309549-d338-567d-8d4d-261f1e3b247d"))
     (comp
       (ref "SW2")
       (value "SW_Push")
@@ -444,18 +444,18 @@
         (field
           (name "Footprint") "Button_Switch_THT:SW_PUSH_6mm")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "IF__xl37TH")
+          (name "SKiDL Tag") "XmvGAIXIs6")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:150"))
+          (name "SKiDL Line") "_gen_sch.py:150"))
       (libsource
         (lib "Switch")
         (part "SW_Push"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "0f2277f6-9905-5f60-bdde-3c1ae1b8e7d9"))
+      (tstamps "31649e32-f7b9-595e-91fc-b41963d2a095"))
     (comp
       (ref "SW3")
       (value "SW_Push")
@@ -467,18 +467,18 @@
         (field
           (name "Footprint") "Button_Switch_THT:SW_PUSH_6mm")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "xGz4k17KI1")
+          (name "SKiDL Tag") "1JObsS8ve6")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:150"))
+          (name "SKiDL Line") "_gen_sch.py:150"))
       (libsource
         (lib "Switch")
         (part "SW_Push"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "ce658d99-e57a-5290-9112-169ed592ec52"))
+      (tstamps "763a806c-4524-5d04-9cf8-4fecfd27b9fc"))
     (comp
       (ref "SW4")
       (value "SW_Push")
@@ -490,18 +490,18 @@
         (field
           (name "Footprint") "Button_Switch_THT:SW_PUSH_6mm")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "K1tXE2qmho")
+          (name "SKiDL Tag") "UbV6H1Tf74")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:150"))
+          (name "SKiDL Line") "_gen_sch.py:150"))
       (libsource
         (lib "Switch")
         (part "SW_Push"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "ae38203c-3aaf-512a-949b-8ccba38d8508"))
+      (tstamps "bc2dada7-0a7e-5b4e-8f0f-f82365c29fd4"))
     (comp
       (ref "TP1")
       (value "TestPoint")
@@ -513,18 +513,18 @@
         (field
           (name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "XJMUhctDP2")
+          (name "SKiDL Tag") "y8p8aI5m4x")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:190"))
+          (name "SKiDL Line") "_gen_sch.py:190"))
       (libsource
         (lib "Connector")
         (part "TestPoint"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "4da4fe76-e690-5e3c-a3a0-5dd7e6433288"))
+      (tstamps "bf4e34b3-51cc-5225-bca8-1ac376b7d9e6"))
     (comp
       (ref "TP2")
       (value "TestPoint")
@@ -536,18 +536,18 @@
         (field
           (name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
         (field
-          (name "Datasheet"))
+          (name "Datasheet") "~")
         (field
-          (name "SKiDL Tag") "Wka4QYNbPr")
+          (name "SKiDL Tag") "0s9d14qX9F")
         (field
-          (name "SKiDL Line") "a7s_backplane_skidl.py:191"))
+          (name "SKiDL Line") "_gen_sch.py:191"))
       (libsource
         (lib "Connector")
         (part "TestPoint"))
       (sheetpath
         (names "/")
         (tstamps "/"))
-      (tstamps "c91b0c23-fd53-54d2-af4c-248a88542929")))
+      (tstamps "ce895012-0257-5a77-9357-c5c27c96c942")))
   (nets
     (net
       (code 1)

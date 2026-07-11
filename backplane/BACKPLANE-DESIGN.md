@@ -1,9 +1,9 @@
 # A7S Cyberdeck Backplane (Shield) — Design + BOM
 
 > **Shared across revisions.** This is the electrical/design doc — its connectivity, pin maps, buses, and
-> power tree apply to **both [rev1](REV1.md) and [rev2](REV2.md)** (they have an identical netlist). The
-> **as-built physical layout** (A7S orientation, floorplan, fab package) is per-rev — see **[REV2.md](REV2.md)**
-> for the current board. Note: §9's 50.8 mm figure and the *dual-strip* ambidextrous scheme are the *early
+> power tree apply to **all revs** (identical netlist). The **as-built physical layout** (A7S orientation,
+> floorplan, fab package) is per-rev — the current board is **v2**, see the [README](README.md); the old
+> rev1/rev2 layouts are archived in [`v1/`](v1/). Note: §9's 50.8 mm figure and the *dual-strip* ambidextrous scheme are the *early
 > design vision*; the as-built board is a **single fixed layout** (86.35 × 74.25 mm, one control strip) whose
 > handedness is a **180° whole-deck rotation, not a mirror** (see §9 "Handedness — AS BUILT"). Layout /
 > fab / renders live in the rev docs.

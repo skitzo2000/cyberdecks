@@ -1,0 +1,21 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"A1","RP2040-Zero","RP2040_Zero",33.500000,-54.000000,90.000000,bottom
+"C1","0.1uF","C_Disc_D5.0mm_W2.5mm_P5.00mm",52.000000,-52.000000,0.000000,bottom
+"C2","0.1uF","C_Disc_D5.0mm_W2.5mm_P5.00mm",52.000000,-44.000000,0.000000,bottom
+"F1","MF-R050 0.5A","Fuse_Bourns_MF-RG300",22.000000,-69.000000,0.000000,bottom
+"F2","MF-R050 0.5A","Fuse_Bourns_MF-RG300",33.950000,-69.100000,0.000000,bottom
+"J1","Conn_02x15_Odd_Even","PinSocket_2x15_P2.54mm_Vertical",47.290000,-32.300000,90.000000,bottom
+"J2","Conn_01x15","PinSocket_1x15_P2.54mm_Vertical",47.260000,-79.260000,90.000000,bottom
+"J5","Conn_02x04_Odd_Even","PinSocket_2x04_P2.54mm_Vertical",80.960000,-40.000000,180.000000,bottom
+"J5b","Conn_01x01","Pin_D1.0mm_L10.0mm",76.460000,-40.040000,90.000000,bottom
+"J6","Conn_02x04_Odd_Even","PinSocket_2x04_P2.54mm_Vertical",74.380000,-27.000000,-90.000000,bottom
+"J6b","Conn_01x01","Pin_D1.0mm_L10.0mm",74.500000,-32.000000,180.000000,bottom
+"J8","JOY","PinHeader_1x05_P2.54mm_Vertical",84.000000,-83.120000,0.000000,bottom
+"J10","ENC","PinHeader_1x04_P2.54mm_Vertical",4.500000,-90.000000,0.000000,bottom
+"J11","BTN5_6","PinHeader_1x03_P2.54mm_Vertical",77.040000,-90.500000,-90.000000,bottom
+"J3","Conn_01x14","TFT_2p8",45.500000,-55.500000,0.000000,top
+"J12","FLIPPER","FLIPPER-GPIO-18",65.260000,-25.000000,180.000000,top
+"SW1","SW_Push","SW_PUSH_6mm",61.750000,-85.750000,0.000000,top
+"SW2","SW_Push","SW_PUSH_6mm",46.750000,-85.750000,0.000000,top
+"SW3","SW_Push","SW_PUSH_6mm",31.750000,-85.750000,0.000000,top
+"SW4","SW_Push","SW_PUSH_6mm",16.750000,-85.750000,0.000000,top

@@ -23,8 +23,10 @@ All in the **STEP coordinate frame**, mm. Validated by mounting holes = 43.8 mm 
 | **15-pin (1×15)** | `HDR-TH_15P-P2_54-V-M` | **(2.08, −78.71)** | X −15.7…+19.9 (15 @2.54), row Y ≈ −78.7 | X[−17.0, 21.1] Y[−80.0, −77.5], Z −8..3.5 (TH) |
 
 - Both span the **same X window** (~−16 … +21) → vertically aligned columns top & bottom.
-- **TODO (pin-1):** confirm which end/row is pin-1 + exact pitch origin by extracting individual pin
-  solids (or from schematic v1.10) before locking the shield footprint mirror.
+- **RESOLVED (pin-1) 2026-07-09 by hardware:** rev1 shield footprints were placed rot=90° → they mated
+  **pin 1 ↔ pin 30** (2×15) and **pin 1 ↔ pin 15** (1×15), i.e. 180° diagonal-flipped. This shorted
+  A7S 3V3 (pins 1/17) onto shield GND and killed the SBC on contact. Fix locked in `build_pcb.py`:
+  place J1/J2 at **rot = 270°** (see [[backplane-header-mirror-bug]] / build_pcb.py comment). rev1 is DOA.
 
 ## Ports (all RIGHT edge — protrude to X≈+31.5) → overhang LEFT
 | Port | Center | Notes |
