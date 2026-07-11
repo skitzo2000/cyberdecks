@@ -3,6 +3,11 @@
 This documents **exactly** how `kicad/a7s_backplane_routed.kicad_pcb` (the current v2 board) was produced,
 so it can be reproduced or audited. The one-off scripts for each step are in [`scripts/`](scripts/).
 
+> The **intermediate boards** these steps produced (`a7s_backplane.kicad_pcb` build output,
+> `_place`, `_hdrfix`, `_v2` + its `.dsn`/`.ses`) and the **`_render`** source board are archived in
+> [`../../v1/kicad/`](../../v1/kicad/) to keep `kicad/` to the v2 deliverable. The scripts below use the
+> `kicad/` paths as originally run — point them at `../../v1/kicad/` (or regenerate) to reproduce.
+
 **Key fact:** v2 was **not** built fresh from `build_pcb.py`. Its auto-placement is a rough netlist dump
 (parts off-board, everything overlapping). The usable placement was always **hand-done in KiCad**. So v2
 started from the previous *routed* board (`v1/kicad/a7s_backplane_render.kicad_pcb`) and was corrected +
