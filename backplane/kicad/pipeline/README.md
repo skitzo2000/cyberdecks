@@ -58,6 +58,20 @@ tools/kpython -c "import pcbnew;b=pcbnew.LoadBoard('kicad/a7s_backplane_v2.kicad
 **8. Silkscreen labels** — `scripts/08_silk_labels.py`
 Adds a net/function label tight to every pin (Flipper-header style: ~1.5 mm off the pad, 0.8 mm font), grounds ringed. Back-side parts on `B.SilkS` (mirrored), TFT on `F.SilkS`. Single-column connectors label to the interior side; button rows label above.
 
+**8b. Credits + easter-egg silkscreen** — `scripts/08b_silk_credits.py`
+Adds the v2 free-text silk: title/designer block (back, right of the RP2040), special-thanks block
+(back, left of the RP2040), Flipper-footprint credit (back, behind J12 — the front strip under the J12
+pin labels is occupied, the labels are rotated vertical), brand/rev line + HACK THE PLANET (front bottom
+edge, the visible strip below the buttons), RIP REV 1 memorial (back, between the fuses and J2). All back
+text is `SetMirrored(True)`. Verified zero new DRC violations vs. the pre-credits baseline.
+
+**8c. Logo footprints (silkscreen art)** — `scripts/08c_logo_footprints.py`
+Traced into `a7s.pretty`: Amnesia Labs brain (`AMNESIA_BRAIN_W20` 20×17.4 mm / `_W12` 12×10.4 mm) and
+DEF CON 34 jack (`DC34_JACK_W30` 30 mm / `_W20` 20 mm — 20 mm is the floor for that art). Full
+magick/potrace recipes in the script header. **pcbnew's Import Graphics crashes on complex SVGs** — always
+use this offline bitmap→potrace→footprint route. **fp_poly keeps only ONE outline per shape** — emit one
+PCB_SHAPE per fractured outline or disjoint islands silently vanish on save.
+
 **9. Schematic (.kicad_sch)** — `scripts/09_gen_schematic.py` (a copy of `tools/gen_kicad_schematic.py`)
 Generates the editable `a7s_backplane.kicad_sch` from the netlist with kiutils: every component as its stock symbol (RP2040 as a custom box), a global net-label on a wire stub off each pin. Needs the kiutils venv + `KICAD_SYM`.
 
